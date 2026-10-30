@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institution Intelligence Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/motion.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="search.html">
+      <span class="logo-mark">IIP</span>
+      <span>Institution Intelligence<small>One Search. One Profile. One Executive View.</small></span>
+    </a>
+    <nav class="topnav">
+      <a href="search.html" class="active">Search</a>
+      <a href="compare.html">Compare</a>
+    </nav>
+    <div class="user-menu" id="userMenu"></div>
+  </header>
+
+  <section class="tile tile-parchment hero">
+    <p class="eyebrow">College Intelligence</p>
+    <h1>One search. One profile.</h1>
+    <p class="lead">Verify any institution, read five years of performance, and see the risks — before you partner.</p>
+
+    <div class="search-panel">
+      <form class="search-row" id="searchForm" autocomplete="off">
+        <input id="q" type="search" placeholder="College name, AISHE code, university, city or promoter" aria-label="Search institutions">
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <div class="suggest" id="suggest"></div>
+      <div class="chips" id="fieldChips">
+        <button type="button" class="chip active" data-field="all">All fields</button>
+        <button type="button" class="chip" data-field="name">College name</button>
+        <button type="button" class="chip" data-field="university">University</button>
+        <button type="button" class="chip" data-field="aishe">AISHE code</button>
+        <button type="button" class="chip" data-field="city">City / State</button>
+        <button type="button" class="chip" data-field="promoter">Promoter / Trust</button>
+      </div>
+    </div>
+
+    <div class="workflow">
+      <span>Search</span><b>›</b><span>Verify</span><b>›</b><span>Analyse 5 years</span><b>›</b>
+      <span>Identify risks</span><b>›</b><span>Assess potential</span><b>›</b><span>Executive brief</span><b>›</b><span>Decide</span>
+    </div>
+  </section>
+
+  <section class="tile-light">
+    <main class="container">
+      <div class="section-head">
+        <h2 id="resultsTitle">All institutions</h2>
+        <span class="muted" id="resultsCount"></span>
+      </div>
+      <div class="results" id="results"><div class="loading">Loading…</div></div>
+    </main>
+  </section>
+
+  <section class="tile tile-dark sources-tile">
+    <h2>Every number has a source.</h2>
+    <p class="lead">Five layers of evidence, each value tagged with where it came from and whether it was verified.</p>
+    <div class="sources-grid">
+      <div class="source-layer"><h4>Government &amp; regulatory</h4><ul><li>UGC, AISHE, AICTE</li><li>NAAC, NIRF, NBA</li><li>Statutory councils</li></ul></div>
+      <div class="source-layer"><h4>University</h4><ul><li>Registration portal</li><li>Affiliation &amp; intake</li><li>Results portal</li></ul></div>
+      <div class="source-layer"><h4>Institution</h4><ul><li>Website &amp; disclosures</li><li>Placement reports</li><li>Annual reports</li></ul></div>
+      <div class="source-layer"><h4>Public records</h4><ul><li>Court records</li><li>Regulatory orders</li><li>Trust filings</li></ul></div>
+      <div class="source-layer"><h4>Internal</h4><ul><li>Campus visits</li><li>Management meetings</li><li>Financials</li></ul></div>
+    </div>
+  </section>
+
+  <div class="compare-tray" id="compareTray" hidden></div>
+
+  <footer class="footer">Institution Intelligence Platform · College project prototype · Fictional sample data — no real institutions, people or organisations are represented.</footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/risk.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

@@ -37,15 +37,15 @@ const Charts = (() => {
       if (v == null) return;
       const h = (v / max) * ih;
       const x = P.l + step * i + (step - gw) / 2 + bw * si;
-      svg += `<rect x="${x + 2}" y="${P.t + ih - h}" width="${bw - 4}" height="${h}" rx="3" style="fill:${s.color}">` +
+      svg += `<rect class="bar" x="${x + 2}" y="${P.t + ih - h}" width="${bw - 4}" height="${h}" rx="3" style="fill:${s.color};--i:${i}">` +
         `<title>${esc(s.name)} ${labels[i]}: ${Fmt.num(v)}</title></rect>`;
     }));
 
     if (line) {
       const pts = line.values.map((v, i) => v == null ? null : [P.l + step * i + step / 2, P.t + ih - (v / 100) * ih]);
-      svg += `<polyline points="${pts.filter(Boolean).map((p) => p.join(',')).join(' ')}" class="line" style="stroke:${line.color}"/>`;
-      pts.forEach((p, i) => p && (svg += `<circle cx="${p[0]}" cy="${p[1]}" r="4" style="fill:${line.color}"/>` +
-        `<text x="${p[0]}" y="${p[1] - 9}" class="pt-label" text-anchor="middle">${Fmt.pct(line.values[i])}</text>`));
+      svg += `<polyline points="${pts.filter(Boolean).map((p) => p.join(',')).join(' ')}" pathLength="1" class="line" style="stroke:${line.color}"/>`;
+      pts.forEach((p, i) => p && (svg += `<circle cx="${p[0]}" cy="${p[1]}" r="4" style="fill:${line.color};--i:${i}"/>` +
+        `<text x="${p[0]}" y="${p[1] - 9}" class="pt-label" text-anchor="middle" style="--i:${i}">${Fmt.pct(line.values[i])}</text>`));
       for (let i = 0; i <= 4; i++) {
         const y = P.t + ih - (ih * i) / 4;
         svg += `<text x="${W - P.r + 8}" y="${y + 4}" class="axis">${25 * i}%</text>`;
@@ -63,9 +63,9 @@ const Charts = (() => {
       const pts = s.values.map((v, i) => v == null ? null : [P.l + step * i, P.t + ih - (v / yMax) * ih]);
       const valid = pts.filter(Boolean);
       if (!valid.length) return;
-      svg += `<polyline points="${valid.map((p) => p.join(',')).join(' ')}" class="line${s.dashed ? ' dashed' : ''}" style="stroke:${s.color}"/>`;
-      pts.forEach((p, i) => p && (svg += `<circle cx="${p[0]}" cy="${p[1]}" r="4" style="fill:${s.color}"><title>${esc(s.name)} ${labels[i]}: ${Fmt.pct(s.values[i])}</title></circle>` +
-        (showValues ? `<text x="${p[0]}" y="${p[1] - 9}" class="pt-label" text-anchor="middle">${Fmt.pct(s.values[i])}</text>` : '')));
+      svg += `<polyline points="${valid.map((p) => p.join(',')).join(' ')}"${s.dashed ? '' : ' pathLength="1"'} class="line${s.dashed ? ' dashed' : ''}" style="stroke:${s.color}"/>`;
+      pts.forEach((p, i) => p && (svg += `<circle cx="${p[0]}" cy="${p[1]}" r="4" style="fill:${s.color};--i:${i}"><title>${esc(s.name)} ${labels[i]}: ${Fmt.pct(s.values[i])}</title></circle>` +
+        (showValues ? `<text x="${p[0]}" y="${p[1] - 9}" class="pt-label" text-anchor="middle" style="--i:${i}">${Fmt.pct(s.values[i])}</text>` : '')));
     });
     return `<svg viewBox="0 0 ${W} ${H}" class="chart" role="img">${svg}</svg>` + legend(series);
   }
@@ -89,10 +89,10 @@ const Charts = (() => {
 
   /** Horizontal bars, HTML-only. items: [{label, value, max, note, cls}] */
   function hbars(items, fmt = Fmt.num) {
-    return `<div class="hbars">${items.map((it) => {
+    return `<div class="hbars">${items.map((it, i) => {
       const w = it.max ? Math.min(100, (it.value / it.max) * 100) : 0;
       return `<div class="hbar"><span class="hbar-label">${esc(it.label)}${it.tag || ''}</span>
-        <span class="hbar-track"><span class="hbar-fill ${it.cls || ''}" style="width:${w}%"></span></span>
+        <span class="hbar-track"><span class="hbar-fill ${it.cls || ''}" style="width:${w}%;--i:${i}"></span></span>
         <span class="hbar-val">${it.note ?? fmt(it.value)}</span></div>`;
     }).join('')}</div>`;
   }

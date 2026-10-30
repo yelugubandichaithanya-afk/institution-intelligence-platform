@@ -7,18 +7,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/motion.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="logo" href="index.html">
+    <a class="logo" href="search.html">
       <span class="logo-mark">IIP</span>
       <span>Institution Intelligence<small>One Search. One Profile. One Executive View.</small></span>
     </a>
     <nav class="topnav">
-      <a href="index.html">Search</a>
+      <a href="search.html">Search</a>
       <a href="compare.html">Compare</a>
     </nav>
-    <form class="topbar-search" action="index.html">
+    <form class="topbar-search" action="search.html">
       <input name="q" type="search" placeholder="Search institutions" aria-label="Search">
     </form>
     <div class="user-menu" id="userMenu"></div>
@@ -49,7 +50,7 @@
       <a href="#risk">Risk centre <span class="count" id="critCount" hidden></span></a>
       <a href="#sources">Sources</a>
       <div class="sidenav-actions">
-        <a class="btn-ghost" href="index.html">Back to search</a>
+        <a class="btn-ghost" href="search.html">Back to search</a>
       </div>
     </nav>
     <main id="profile"><div class="loading">Loading institution…</div></main>
@@ -60,6 +61,7 @@
   <script src="js/config.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/auth.js"></script>
+  <script src="js/motion.js"></script>
   <script src="js/api.js"></script>
   <script src="js/risk.js"></script>
   <script src="js/charts.js"></script>

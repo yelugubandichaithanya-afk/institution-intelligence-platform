@@ -469,6 +469,7 @@ table.cmp-table th { vertical-align: top; font-size: 14px; letter-spacing: -0.22
 .auth-brand ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; color: var(--body-muted-dark); font-size: 14px; letter-spacing: -0.224px; }
 .auth-brand .small { color: var(--ink-48); margin-top: auto; }
 .auth-card { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+.back-home { font-size: 14px; color: var(--primary); margin-bottom: 18px; align-self: flex-start; }
 .auth-title { font-size: 34px; line-height: 1.2; letter-spacing: -0.374px; margin: 0 0 24px; }
 .auth-form { display: grid; gap: 16px; }
 .auth-form[hidden] { display: none; }

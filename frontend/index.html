@@ -3,83 +3,239 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Institution Intelligence Platform</title>
+  <title>Institution Intelligence — Know the institution before you partner</title>
+  <meta name="description" content="Due-diligence platform for institution partnerships: five years of admissions, placements, rankings, promoter records and risk — every number traced to its source.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/landing.css">
 </head>
-<body>
-  <header class="topbar">
+<body class="landing">
+  <header class="topbar" id="nav">
     <a class="logo" href="index.html">
       <span class="logo-mark">IIP</span>
-      <span>Institution Intelligence<small>One Search. One Profile. One Executive View.</small></span>
+      <span>Institution Intelligence</span>
     </a>
-    <nav class="topnav">
-      <a href="index.html" class="active">Search</a>
-      <a href="compare.html">Compare</a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#what">Overview</a>
+      <a href="#verify">Verification</a>
+      <a href="#modules">Modules</a>
+      <a href="#how">How it works</a>
+      <a href="#trust">Security</a>
     </nav>
-    <div class="user-menu" id="userMenu"></div>
+    <div class="nav-cta">
+      <a class="btn btn-sm" id="navCta" href="login.html">Sign in</a>
+    </div>
   </header>
+  <div class="scroll-progress" aria-hidden="true"><i id="progressBar"></i></div>
 
-  <section class="tile tile-parchment hero">
-    <p class="eyebrow">College Intelligence</p>
-    <h1>One search. One profile.</h1>
-    <p class="lead">Verify any institution, read five years of performance, and see the risks — before you partner.</p>
-
-    <div class="search-panel">
-      <form class="search-row" id="searchForm" autocomplete="off">
-        <input id="q" type="search" placeholder="College name, AISHE code, university, city or promoter" aria-label="Search institutions">
-        <button class="btn" type="submit">Search</button>
-      </form>
-      <div class="suggest" id="suggest"></div>
-      <div class="chips" id="fieldChips">
-        <button type="button" class="chip active" data-field="all">All fields</button>
-        <button type="button" class="chip" data-field="name">College name</button>
-        <button type="button" class="chip" data-field="university">University</button>
-        <button type="button" class="chip" data-field="aishe">AISHE code</button>
-        <button type="button" class="chip" data-field="city">City / State</button>
-        <button type="button" class="chip" data-field="promoter">Promoter / Trust</button>
+  <main>
+    <!-- 1 · Hero -->
+    <section class="l-hero">
+      <p class="eyebrow hero-fade" style="--fd:.05s">Institution Intelligence Platform</p>
+      <h1 class="hero-title" data-split>Know the institution before you partner.</h1>
+      <p class="l-section lead hero-fade" style="--fd:.8s;padding:0;margin:22px auto 0;max-width:720px;font-family:var(--font-display);font-size:24px;line-height:1.33;color:var(--ink-48)">
+        Five years of admissions, placements, rankings, promoter records and risk — in one profile, with every number traced to its source.
+      </p>
+      <div class="cta-row hero-fade" style="--fd:1s">
+        <a class="btn" href="login.html" data-cta>Sign in</a>
+        <a class="text-cta" href="#what">See how it works</a>
       </div>
-    </div>
 
-    <div class="workflow">
-      <span>Search</span><b>›</b><span>Verify</span><b>›</b><span>Analyse 5 years</span><b>›</b>
-      <span>Identify risks</span><b>›</b><span>Assess potential</span><b>›</b><span>Executive brief</span><b>›</b><span>Decide</span>
-    </div>
-  </section>
-
-  <section class="tile-light">
-    <main class="container">
-      <div class="section-head">
-        <h2 id="resultsTitle">All institutions</h2>
-        <span class="muted" id="resultsCount"></span>
+      <div class="device-stage" aria-hidden="true">
+        <div class="device" id="device">
+          <div class="dv-bar"><span class="dv-logo">IIP</span><span>Search</span><span>Compare</span><span class="dv-user">Partnerships Team</span></div>
+          <div class="dv-hero">
+            <div><small>Hyderabad, Telangana · AISHE C-90231 · Est. 2004</small><b>Deccan Valley Institute of Technology</b></div>
+            <span class="pill amber">🟡 Review</span>
+          </div>
+          <div class="dv-body">
+            <div class="dv-kpis">
+              <div class="dv-kpi"><span>Capacity utilisation</span><b>68% <span class="trend up" style="display:inline;font-size:18px">↗</span></b></div>
+              <div class="dv-kpi"><span>Verified admissions</span><b>820</b></div>
+              <div class="dv-kpi"><span>Verified placement</span><b>73%</b></div>
+              <div class="dv-kpi"><span>NAAC</span><b>B++</b></div>
+            </div>
+            <div class="dv-grid">
+              <div class="dv-card">
+                <h5>Approved intake vs university-verified admissions</h5>
+                <div class="dv-bars">
+                  <div class="col" style="--ci:0"><i style="--h:90%"></i><i style="--h:45%"></i></div>
+                  <div class="col" style="--ci:1"><i style="--h:90%"></i><i style="--h:51%"></i></div>
+                  <div class="col" style="--ci:2"><i style="--h:90%"></i><i style="--h:58%"></i></div>
+                  <div class="col" style="--ci:3"><i style="--h:100%"></i><i style="--h:63%"></i></div>
+                  <div class="col" style="--ci:4"><i style="--h:100%"></i><i style="--h:68%"></i></div>
+                </div>
+              </div>
+              <div class="dv-card">
+                <h5>Key risks</h5>
+                <div class="dv-flags">
+                  <span class="flag attention" style="--fi:0;margin:0">🟠 Admission claims exceed verified</span>
+                  <span class="flag attention" style="--fi:1;margin:0">🟠 NBA accreditation lapsed</span>
+                  <span class="flag ok" style="--fi:2;margin:0">🟢 Recognition verified</span>
+                  <span class="flag ok" style="--fi:3;margin:0">🟢 Admissions growing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="results" id="results"><div class="loading">Loading…</div></div>
-    </main>
-  </section>
+    </section>
 
-  <section class="tile tile-dark sources-tile">
-    <h2>Every number has a source.</h2>
-    <p class="lead">Five layers of evidence, each value tagged with where it came from and whether it was verified.</p>
-    <div class="sources-grid">
-      <div class="source-layer"><h4>Government &amp; regulatory</h4><ul><li>UGC, AISHE, AICTE</li><li>NAAC, NIRF, NBA</li><li>Statutory councils</li></ul></div>
-      <div class="source-layer"><h4>University</h4><ul><li>Registration portal</li><li>Affiliation &amp; intake</li><li>Results portal</li></ul></div>
-      <div class="source-layer"><h4>Institution</h4><ul><li>Website &amp; disclosures</li><li>Placement reports</li><li>Annual reports</li></ul></div>
-      <div class="source-layer"><h4>Public records</h4><ul><li>Court records</li><li>Regulatory orders</li><li>Trust filings</li></ul></div>
-      <div class="source-layer"><h4>Internal</h4><ul><li>Campus visits</li><li>Management meetings</li><li>Financials</li></ul></div>
+    <!-- 2 · Statement -->
+    <section class="l-statement tile-dark" id="what">
+      <div class="sticky">
+        <p class="highlight-text" id="statement">Colleges publish the numbers they want you to see. <span class="accent">This platform shows you what can be verified</span> — admissions, placements, rankings, promoters and risk, each traced to an official source, a date and a verification status.</p>
+      </div>
+    </section>
+
+    <!-- 3 · Claimed vs verified -->
+    <section class="l-section tile-parchment" id="verify">
+      <p class="eyebrow" data-reveal>Admission intelligence</p>
+      <h2 data-reveal>Claimed is not verified.</h2>
+      <p class="lead" data-reveal>Every admission figure a college publishes sits next to what the university portal actually registered. The gap is the story.</p>
+
+      <div class="versus" data-reveal="scale">
+        <div class="claim"><small>College claims</small><b data-count="950">0</b></div>
+        <div class="verified"><small>University portal verified</small><b data-count="820">0</b></div>
+        <div class="gap"><small>Variance</small><b data-count="13.7" data-decimals="1" data-suffix="%">0</b></div>
+      </div>
+      <div class="compare-bars" data-reveal>
+        <div class="row"><span>College claim</span><span class="track"><span class="fill" style="--w:100%;background:var(--c4)"></span></span><span>950</span></div>
+        <div class="row"><span>University verified</span><span class="track"><span class="fill" style="--w:86.3%;background:var(--c1);--d:.45s"></span></span><span>820</span></div>
+        <div class="row"><span>Approved intake</span><span class="track"><span class="fill" style="--w:100%;background:var(--c2);--d:.7s"></span></span><span>1,200</span></div>
+      </div>
+    </section>
+
+    <!-- 4 · Modules gallery -->
+    <section class="l-gallery tile-dark" id="modules">
+      <div class="sticky">
+        <div class="gallery-head">
+          <p class="eyebrow">One profile</p>
+          <h2 style="font-size:56px;line-height:1.07">Nine modules. Nothing hidden.</h2>
+        </div>
+        <div class="gallery-track" id="galleryTrack">
+          <article class="module-card"><div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 14h4"/></svg></div><span class="num">01</span><h3>Executive view</h3><p>One screen: ownership, intake, utilisation, placement, regulatory status and the key risks.</p></article>
+          <article class="module-card"><div class="glyph"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><span class="num">02</span><h3>Admissions</h3><p>Five years of approved intake against university-registered students, course by course.</p></article>
+          <article class="module-card"><div class="glyph"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div><span class="num">03</span><h3>Placements</h3><p>Verified placement rates, packages and recruiters — set against what the website claims.</p></article>
+          <article class="module-card"><div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></div><span class="num">04</span><h3>Rankings &amp; accreditation</h3><p>NIRF timelines, NAAC and NBA validity, UGC and council approvals, affiliation.</p></article>
+          <article class="module-card"><div class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><span class="num">05</span><h3>Promoter profile</h3><p>Trusts, board, related entities and legal records — each labelled by its exact legal stage.</p></article>
+          <article class="module-card"><div class="glyph"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><span class="num">06</span><h3>Campus health</h3><p>Faculty ratio, pass rates, dropouts, labs, library and hostel occupancy.</p></article>
+          <article class="module-card"><div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 6.5C17 4.6 14.8 3 12 3S7 4.6 7 6.5 9.2 10 12 10s5 1.6 5 3.5S14.8 17 12 17s-5-1.6-5-3.5"/></svg></div><span class="num">07</span><h3>Commercial</h3><p>Fees, collection efficiency, available capacity and the revenue headroom a partnership could unlock.</p></article>
+          <article class="module-card"><div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3zM12 10v5M12 18h.01"/></svg></div><span class="num">08</span><h3>Risk centre</h3><p>Rule-based red flags with the evidence behind each one. No black-box score.</p></article>
+          <article class="module-card"><div class="glyph"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M8 11l2 2 4-4"/></svg></div><span class="num">09</span><h3>Sources</h3><p>Every value with its source, capture date and verification status — filterable and auditable.</p></article>
+        </div>
+        <div class="gallery-dots" id="galleryDots"></div>
+      </div>
+    </section>
+
+    <!-- 5 · Risk -->
+    <section class="l-section tile-light">
+      <p class="eyebrow" data-reveal>Risk &amp; red-flag centre</p>
+      <h2 data-reveal>Risk, without the noise.</h2>
+      <p class="lead" data-reveal>Transparent rules surface what needs attention. Your leadership makes the call — with the evidence one click away.</p>
+      <div class="risk-demo">
+        <div><h4 data-reveal>🔴 Critical</h4>
+          <div class="flag critical" data-reveal><b>Significant admission discrepancy</b><p>College claims 205, university shows 124 (39.5% gap)</p></div>
+          <div class="flag critical" data-reveal><b>Recognition issue — council</b><p>Approval conditional on faculty shortfall</p></div></div>
+        <div><h4 data-reveal>🟠 Attention</h4>
+          <div class="flag attention" data-reveal><b>Placement claim exceeds verified data</b><p>Claimed 92% vs verified 73%</p></div>
+          <div class="flag attention" data-reveal><b>Infrastructure gap — hostel</b><p>Hostel 97% occupied</p></div></div>
+        <div><h4 data-reveal>🟢 Verified</h4>
+          <div class="flag ok" data-reveal><b>Accreditation valid</b><p>NAAC A until Dec 2028</p></div>
+          <div class="flag ok" data-reveal><b>Stable placement</b><p>Latest verified placement 84%</p></div></div>
+      </div>
+    </section>
+
+    <!-- 6 · Sources -->
+    <section class="l-section tile-parchment">
+      <p class="eyebrow" data-reveal>Source &amp; verification layer</p>
+      <h2 data-reveal>Every number has a source.</h2>
+      <p class="lead" data-reveal>Source, date and status travel with every value — so an impressive figure without evidence can't slip into the decision.</p>
+      <div class="evidence-wall">
+        <div class="evidence-chip" data-reveal><small>2025-26 admissions</small><b data-count="820">0</b><span class="badge st-verified">✅ Verified</span><div class="src">University Portal · 23-Sep-2026</div></div>
+        <div class="evidence-chip" data-reveal><small>Student strength</small><b data-count="3120">0</b><span class="badge st-govt">🏛️ Government data</span><div class="src">AISHE · 31-Mar-2026</div></div>
+        <div class="evidence-chip" data-reveal><small>Placement claim</small><b data-count="92" data-suffix="%">0</b><span class="badge st-self">⚠️ Self-reported</span><div class="src">College Website · 01-Aug-2025</div></div>
+        <div class="evidence-chip" data-reveal><small>Collection efficiency</small><b data-count="88" data-suffix="%">0</b><span class="badge st-internal">🔒 Internal</span><div class="src">Management discussion · 18-Sep-2026</div></div>
+      </div>
+    </section>
+
+    <!-- 7 · Compare -->
+    <section class="l-section tile-dark" style="background:var(--tile-3)">
+      <p class="eyebrow" data-reveal>Compare</p>
+      <h2 data-reveal>Side by side. Best value starred.</h2>
+      <p class="lead" data-reveal>Put up to four institutions next to each other across 35 measures and see where each one leads.</p>
+      <div class="cmp-demo" id="cmpDemo">
+        <div class="h">&nbsp;</div><div class="h">DVIT</div><div class="h">ASET</div><div class="h">NCASC</div>
+        <div class="lbl">Capacity utilisation</div><div>68%</div><div class="best">97%</div><div>77%</div>
+        <div class="lbl">Verified placement</div><div>73%</div><div class="best">84%</div><div>Not verified</div>
+        <div class="lbl">5-year admissions CAGR</div><div class="best">11.0%</div><div>2.7%</div><div>1.6%</div>
+        <div class="lbl">Available capacity</div><div class="best">33%</div><div>5%</div><div>22%</div>
+        <div class="lbl">Critical red flags</div><div class="best">0</div><div class="best">0</div><div class="best">0</div>
+      </div>
+      <div class="cta-row"><a class="text-cta" href="login.html">Sign in to compare</a></div>
+    </section>
+
+    <!-- 8 · How it works -->
+    <section class="l-section tile-light" id="how">
+      <p class="eyebrow" data-reveal>How it works</p>
+      <h2 data-reveal>From search to decision.</h2>
+      <p class="lead" data-reveal>A single workflow, designed for partnership due diligence.</p>
+      <div class="steps" id="steps">
+        <span class="progress"></span>
+        <div class="step"><i>1</i>Search college</div>
+        <div class="step"><i>2</i>Verify institution</div>
+        <div class="step"><i>3</i>Analyse 5 years</div>
+        <div class="step"><i>4</i>Identify risks</div>
+        <div class="step"><i>5</i>Assess potential</div>
+        <div class="step"><i>6</i>Executive brief</div>
+        <div class="step"><i>7</i>Decide</div>
+      </div>
+    </section>
+
+    <!-- 9 · Stats -->
+    <section class="l-section tile-parchment">
+      <h2 data-reveal>Built for depth.</h2>
+      <div class="stats-row">
+        <div class="stat" data-reveal><b data-count="5">0</b><span>years of history per metric</span></div>
+        <div class="stat" data-reveal><b data-count="9">0</b><span>modules in every profile</span></div>
+        <div class="stat" data-reveal><b data-count="74">0</b><span>evidence-tagged data points</span></div>
+        <div class="stat" data-reveal><b data-count="4">0</b><span>colleges side by side</span></div>
+      </div>
+    </section>
+
+    <!-- 10 · Trust -->
+    <section class="l-section tile-dark" id="trust">
+      <p class="eyebrow" data-reveal>Security</p>
+      <h2 data-reveal>Private by design.</h2>
+      <p class="lead" data-reveal>Institution data is only visible to signed-in team members.</p>
+      <div class="trust-grid">
+        <div data-reveal><h4>Invite-only access</h4><p>Accounts are created by an administrator. There is no public sign-up.</p></div>
+        <div data-reveal><h4>Locked-down database</h4><p>Row-level security on every table. Anonymous requests see nothing.</p></div>
+        <div data-reveal><h4>Keys stay server-side</h4><p>Secret keys live only on the API server, never in the browser.</p></div>
+      </div>
+    </section>
+
+    <!-- 11 · Final CTA -->
+    <section class="l-section tile-light l-final">
+      <h2 data-reveal>Ready when you are.</h2>
+      <p class="lead" data-reveal>Sign in to search institutions, open profiles and build your executive brief.</p>
+      <div class="cta-row" data-reveal><a class="btn" href="login.html" data-cta>Sign in</a></div>
+    </section>
+  </main>
+
+  <footer class="landing-footer">
+    <div class="l-inner">
+      <span>Institution Intelligence Platform · College project prototype · Fictional sample data.</span>
+      <span><a href="login.html">Sign in</a></span>
     </div>
-  </section>
-
-  <div class="compare-tray" id="compareTray" hidden></div>
-
-  <footer class="footer">Institution Intelligence Platform · College project prototype · Fictional sample data — no real institutions, people or organisations are represented.</footer>
+  </footer>
 
   <script src="js/config.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/auth.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/risk.js"></script>
-  <script src="js/charts.js"></script>
-  <script src="js/search.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/landing.js"></script>
 </body>
 </html>

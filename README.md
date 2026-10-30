@@ -71,8 +71,9 @@ backend/
   supabase/schema.sql Tables, search view, RLS policies
   seed/               sample_data.js (source), seed_data.json, seed.py
 frontend/
-  login.html          Sign in / create account
-  index.html          Search + pick colleges to compare
+  index.html          Public landing page (what the platform does, scroll animations)
+  login.html          Sign in (accounts are created by an admin — backend/create_user.py)
+  search.html         Search + pick colleges to compare
   institution.html    Full institution profile (9 modules)
   compare.html        Side-by-side comparison of 2–4 colleges
   js/config.js        API base URL (local vs deployed)
@@ -80,6 +81,9 @@ frontend/
   js/api.js           API client (auto-refreshes expired tokens)
   js/risk.js          Rule-based red-flag engine
   js/charts.js        SVG charts
+  js/motion.js        Custom cursor, scroll reveals, chart draw-in, count-up (respects reduced motion)
+  js/landing.js       Landing-page scroll storytelling
+  css/motion.css      Motion layer · css/landing.css  Landing page
 ```
 
 ## Evidence model

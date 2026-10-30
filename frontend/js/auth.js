@@ -50,7 +50,7 @@ const Auth = (() => {
     const s = session();
     save(null);
     if (s) await post('/auth/logout', {}, s.access_token).catch(() => {});
-    location.href = 'login.html';
+    location.href = 'index.html';
   }
 
   function currentPage() {
@@ -64,7 +64,7 @@ const Auth = (() => {
 
   /** Only allow redirects to our own pages. */
   function safeNext(next) {
-    return next && /^[\w-]+\.html([?#].*)?$/.test(next) ? next : 'index.html';
+    return next && /^[\w-]+\.html([?#].*)?$/.test(next) ? next : 'search.html';
   }
 
   function renderUserMenu() {

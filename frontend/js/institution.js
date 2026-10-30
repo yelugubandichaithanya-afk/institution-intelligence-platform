@@ -12,7 +12,7 @@
   function header(inst, r) {
     return `<div class="profile-head">
       <div>
-        <div class="breadcrumb"><a href="index.html">Search</a> › ${esc(inst.state)} › ${esc(inst.city)}</div>
+        <div class="breadcrumb"><a href="search.html">Search</a> › ${esc(inst.state)} › ${esc(inst.city)}</div>
         <h1>${esc(inst.name)}</h1>
         <div class="meta">
           <span>${esc(inst.city)}, ${esc(inst.state)}</span><span>AISHE ${esc(inst.aishe)}</span>
@@ -424,7 +424,7 @@
   async function init() {
     if (!Auth.requireLogin()) return;
     const id = new URLSearchParams(location.search).get('id');
-    if (!id) { location.href = 'index.html'; return; }
+    if (!id) { location.href = 'search.html'; return; }
     try {
       const inst = await API.getInstitution(id);
       const r = Risk.evaluate(inst);
@@ -444,7 +444,7 @@
       bindCompare(inst);
       if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
     } catch (err) {
-      root.innerHTML = `<div class="empty">${esc(err.message)}. <a href="index.html">Back to search</a></div>`;
+      root.innerHTML = `<div class="empty">${esc(err.message)}. <a href="search.html">Back to search</a></div>`;
     }
   }
 
