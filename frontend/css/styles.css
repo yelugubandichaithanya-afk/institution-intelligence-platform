@@ -329,6 +329,14 @@ table.cmp-table th { vertical-align: top; text-transform: none; letter-spacing: 
 .auth-form .hint { font-weight: 400; font-size: 12px; color: var(--muted); }
 .auth-form .btn { margin-top: 6px; }
 .btn:disabled { opacity: .6; cursor: wait; }
+.auth-links { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 2px; }
+.text-link { background: none; border: 0; padding: 0; font: inherit; font-size: 13px; color: var(--accent); cursor: pointer; }
+.text-link:hover { text-decoration: underline; }
+.auth-card-solo { background: var(--surface); border-radius: 18px; width: 100%; max-width: 420px; box-shadow: 0 24px 60px rgba(0,0,0,.3); }
+.auth-card-solo .auth-links { margin-top: 14px; }
+.logo-dark { color: var(--text); }
+.logo-dark small { color: var(--text-2); opacity: 1; }
+.auth-title { font-size: 20px; margin: 22px 0 16px; }
 .alert { padding: 10px 12px; border-radius: 8px; font-size: 13px; margin-bottom: 14px; }
 .alert.error { background: var(--red-soft); color: var(--red); }
 .alert.success { background: var(--green-soft); color: var(--green); }

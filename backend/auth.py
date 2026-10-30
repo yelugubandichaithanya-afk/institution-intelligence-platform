@@ -58,6 +58,14 @@ def _body():
     return request.get_json(silent=True) or {}
 
 
+RATE_LIMIT_MSG = "Too many emails have been sent recently. Please wait a few minutes and try again."
+
+
+def _redirect(page):
+    """Where links in auth emails should land (must be in Supabase's allowed redirect URLs)."""
+    return {"redirect_to": f"{Config.SITE_URL}/{page}"} if Config.SITE_URL else None
+
+
 def verify_token(token):
     key = hashlib.sha256(token.encode()).hexdigest()
     now = time.monotonic()
@@ -103,10 +111,11 @@ def signup():
     if len(password) < MIN_PASSWORD:
         return error_response(400, f"Password must be at least {MIN_PASSWORD} characters.")
 
-    params = {"redirect_to": f"{Config.SITE_URL}/login.html"} if Config.SITE_URL else None
-    status, data = _gotrue("POST", "/signup", params=params, json={
+    status, data = _gotrue("POST", "/signup", params=_redirect("login.html"), json={
         "email": email, "password": password, "data": {"full_name": full_name},
     })
+    if status == 429:
+        return error_response(429, RATE_LIMIT_MSG)
     if status >= 400:
         return error_response(400 if status < 500 else 502, _message(data, "Could not create account."))
 
@@ -145,6 +154,47 @@ def refresh():
     if status >= 400:
         return error_response(401, "Your session has expired. Please sign in again.")
     return jsonify({"session": _session(data)})
+
+
+@bp.post("/recover")
+def recover():
+    """Send a password-reset email. Same reply whether or not the account exists."""
+    email = (_body().get("email") or "").strip().lower()
+    if not EMAIL_RE.match(email):
+        return error_response(400, "Enter a valid email address.")
+    status, _ = _gotrue("POST", "/recover", params=_redirect("reset-password.html"), json={"email": email})
+    if status == 429:
+        return error_response(429, RATE_LIMIT_MSG)
+    if status >= 500:
+        return error_response(502, "Could not send the reset email. Try again shortly.")
+    return jsonify({"message": "If an account exists for that email, a password reset link has been sent."})
+
+
+@bp.post("/resend-confirmation")
+def resend_confirmation():
+    email = (_body().get("email") or "").strip().lower()
+    if not EMAIL_RE.match(email):
+        return error_response(400, "Enter a valid email address.")
+    status, _ = _gotrue("POST", "/resend", params=_redirect("login.html"), json={"type": "signup", "email": email})
+    if status == 429:
+        return error_response(429, RATE_LIMIT_MSG)
+    if status >= 500:
+        return error_response(502, "Could not send the email. Try again shortly.")
+    return jsonify({"message": "If that account is awaiting confirmation, a new link has been sent."})
+
+
+@bp.post("/update-password")
+@require_auth
+def update_password():
+    """Set a new password. Called with the short-lived token from the reset email."""
+    password = _body().get("password") or ""
+    if len(password) < MIN_PASSWORD:
+        return error_response(400, f"Password must be at least {MIN_PASSWORD} characters.")
+    token = request.headers["Authorization"][7:].strip()
+    status, data = _gotrue("PUT", "/user", token=token, json={"password": password})
+    if status >= 400:
+        return error_response(400 if status < 500 else 502, _message(data, "Could not update password."))
+    return jsonify({"message": "Password updated. Please sign in with your new password."})
 
 
 @bp.post("/logout")

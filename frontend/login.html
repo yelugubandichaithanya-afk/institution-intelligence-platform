@@ -37,6 +37,17 @@
         <label>Email<input type="email" name="email" autocomplete="email" required></label>
         <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
         <button class="btn btn-block" type="submit">Sign in</button>
+        <div class="auth-links">
+          <button type="button" class="text-link" id="forgotLink">Forgot password?</button>
+          <button type="button" class="text-link" id="resendLink" hidden>Resend confirmation email</button>
+        </div>
+      </form>
+
+      <form id="forgotForm" class="auth-form" novalidate hidden>
+        <p class="small muted" style="margin:0">Enter your account email and we'll send you a link to set a new password.</p>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <button class="btn btn-block" type="submit">Send reset link</button>
+        <div class="auth-links"><button type="button" class="text-link" id="backToLogin">← Back to sign in</button></div>
       </form>
 
       <form id="signupForm" class="auth-form" novalidate hidden>
@@ -59,7 +70,12 @@
       if (Auth.session()) { location.replace(next); return; }
 
       const alertBox = document.getElementById('alert');
-      const forms = { login: document.getElementById('loginForm'), signup: document.getElementById('signupForm') };
+      const forms = {
+        login: document.getElementById('loginForm'),
+        signup: document.getElementById('signupForm'),
+        forgot: document.getElementById('forgotForm'),
+      };
+      const resendLink = document.getElementById('resendLink');
 
       function showAlert(msg, kind = 'error') {
         alertBox.textContent = msg;
@@ -81,7 +97,27 @@
       const hash = new URLSearchParams(location.hash.slice(1));
       if (hash.get('type') === 'signup') showAlert('Email confirmed. Please sign in.', 'success');
       else if (hash.get('error_description')) showAlert(hash.get('error_description'));
+      else if (new URLSearchParams(location.search).get('reset') === '1') showAlert('Password updated. Please sign in with your new password.', 'success');
       if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+
+      document.getElementById('forgotLink').addEventListener('click', () => {
+        switchTab('forgot');
+        forms.forgot.email.value = forms.login.email.value;
+      });
+      document.getElementById('backToLogin').addEventListener('click', () => switchTab('login'));
+
+      resendLink.addEventListener('click', async () => {
+        const email = forms.login.email.value.trim();
+        if (!email) return showAlert('Enter your email above first.');
+        try { showAlert(await Auth.resendConfirmation(email), 'success'); } catch (err) { showAlert(err.message); }
+      });
+
+      forms.forgot.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = forms.forgot.email.value.trim();
+        if (!email) return showAlert('Please enter your email.');
+        submitWith(forms.forgot, async () => showAlert(await Auth.requestPasswordReset(email), 'success'));
+      });
 
       document.querySelector('.auth-tabs').addEventListener('click', (e) => {
         if (e.target.dataset.tab) switchTab(e.target.dataset.tab);
@@ -101,8 +137,14 @@
       forms.login.addEventListener('submit', (e) => {
         e.preventDefault();
         const f = new FormData(forms.login);
+        resendLink.hidden = true;
         submitWith(forms.login, async () => {
-          await Auth.login(f.get('email').trim(), f.get('password'));
+          try {
+            await Auth.login(f.get('email').trim(), f.get('password'));
+          } catch (err) {
+            if (/not confirmed/i.test(err.message)) resendLink.hidden = false;
+            throw err;
+          }
           location.replace(next);
         });
       });

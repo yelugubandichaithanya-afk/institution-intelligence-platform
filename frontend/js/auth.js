@@ -39,6 +39,15 @@ const Auth = (() => {
     return r.data; // { session, message? }
   }
 
+  async function simplePost(path, body, token) {
+    const r = await post(path, body, token);
+    if (!r.ok) throw new Error(r.data.error || 'Request failed.');
+    return r.data.message;
+  }
+  const requestPasswordReset = (email) => simplePost('/auth/recover', { email });
+  const resendConfirmation = (email) => simplePost('/auth/resend-confirmation', { email });
+  const updatePassword = (token, password) => simplePost('/auth/update-password', { password }, token);
+
   let refreshing = null;
   function refresh() {
     // Share one in-flight refresh between parallel requests.
@@ -92,5 +101,8 @@ const Auth = (() => {
     return true;
   }
 
-  return { session, login, signup, refresh, logout, requireLogin, redirectToLogin, safeNext };
+  return {
+    session, login, signup, refresh, logout, requireLogin, redirectToLogin, safeNext,
+    requestPasswordReset, resendConfirmation, updatePassword,
+  };
 })();
