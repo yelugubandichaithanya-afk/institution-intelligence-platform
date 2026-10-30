@@ -295,6 +295,7 @@ button { font-family: inherit; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.grid-4.grid-5 { grid-template-columns: repeat(5, 1fr); }
 .grid-2 > *, .grid-3 > *, .grid-4 > *, .exec-grid > *, .risk-cols > *, .cmp-flags > * { min-width: 0; }
 .kv td:last-child { overflow-wrap: anywhere; }
 .kv .ev { white-space: normal; }
@@ -489,7 +490,7 @@ table.cmp-table th { vertical-align: top; font-size: 14px; letter-spacing: -0.22
   .tile .lead { font-size: 24px; }
   .exec-grid { grid-template-columns: 1fr 1fr; }
   .exec-grid > :first-child { grid-column: 1 / -1; }
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4, .grid-4.grid-5 { grid-template-columns: repeat(2, 1fr); }
   .profile-head h1 { font-size: 40px; }
 }
 @media (max-width: 833px) {
@@ -523,12 +524,12 @@ table.cmp-table th { vertical-align: top; font-size: 14px; letter-spacing: -0.22
   .compare-tray .tray-items { display: none; }
   .compare-tray > span:first-child { flex: 1; }
   .results { grid-template-columns: 1fr; }
-  .grid-4 { grid-template-columns: 1fr 1fr; }
+  .grid-4, .grid-4.grid-5 { grid-template-columns: 1fr 1fr; }
   .hbar { grid-template-columns: 110px 1fr 64px; }
   .timeline { grid-template-columns: 100px repeat(5, 1fr); }
   .timeline > div { font-size: 12px; padding: 12px 6px; }
   .subnav-title { font-size: 17px; }
-  .subnav-actions a:not(.btn) { display: none; }
+  .subnav .subnav-actions a:not(.btn) { display: none; }
   .profile-head h1 { font-size: 32px; }
   .compare-tray { padding: 12px 16px; flex-wrap: wrap; }
   .auth-card { padding: 36px 24px; }
@@ -536,6 +537,40 @@ table.cmp-table th { vertical-align: top; font-size: 14px; letter-spacing: -0.22
 @media (max-width: 419px) {
   .tile h1 { font-size: 28px; }
   .topnav { gap: 14px; }
+}
+
+/* ============================================================ Touch devices */
+@media (pointer: coarse) {
+  /* 44px tap targets in the nav bars */
+  .topbar { gap: 16px; }
+  .topnav { gap: 4px; }
+  .topnav a, .user-menu .link-btn, .logo { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; font-size: 13px; }
+  .logo { padding-left: 0; }
+  .subnav .btn, .btn-sm { min-height: 36px; padding: 8px 16px; font-size: 13px; }
+  .text-cta, .back-home, .flag a, .compare-tray .link-btn { display: inline-flex; align-items: center; min-height: 44px; }
+  .filter-row .chip, .filter-row .chip.active { padding: 10px 16px; font-size: 13px; }
+  .chip { min-height: 40px; }
+  .pick-chip button { width: 34px; height: 34px; font-size: 16px; }
+  .cmp-toggle { min-height: 40px; }
+  .cmp-toggle input { width: 18px; height: 18px; }
+  .sidenav a { min-height: 40px; }
+  .subnav-actions a:not(.btn), .breadcrumb a { display: inline-flex; align-items: center; min-height: 40px; }
+  /* iOS zooms into inputs below 16px — keep every field at 16px+ */
+  input, select, textarea { font-size: 16px !important; }
+  /* Evidence tooltips: tap a value, read its source in a bottom sheet */
+  .ev:focus .ev-tip {
+    position: fixed; left: 16px; right: 16px; bottom: 16px; top: auto; transform: none;
+    white-space: normal; font-size: 14px; padding: 14px 16px; border-radius: var(--r-lg); z-index: 70;
+  }
+}
+@media (max-width: 640px) {
+  .variance { grid-template-columns: 1fr; }
+  .variance > div { border-right: 0; min-width: 0; }
+  .variance .k-value { font-size: 24px; }
+  .kpi .k-value { font-size: 22px; }
+  .card > h2, .section-head h2 { font-size: 26px; }
+  .card h3 { font-size: 18px; margin-top: 32px; }
+  .ceo b { font-size: 17px; }
 }
 
 /* ============================================================ Print = Executive Brief */

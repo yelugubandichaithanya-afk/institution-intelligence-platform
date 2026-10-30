@@ -41,7 +41,7 @@
 
     return `<section class="card" id="executive">
       <h2>Executive view</h2>
-      <p class="sub">One-screen view. Hover any value with a coloured dot to see its source, date and verification status.</p>
+      <p class="sub">One-screen view. Hover or tap any value with a coloured dot to see its source, date and verification status.</p>
       <div class="exec-grid">
         <div class="panel"><h4>Executive snapshot</h4>
           <table class="kv">
@@ -374,7 +374,7 @@
     return `<section class="card" id="sources">
       <h2>Sources &amp; verification.</h2>
       <p class="sub">Every number on this profile with its source, date and verification status (${rows.length} data points).</p>
-      <div class="grid-4" style="grid-template-columns:repeat(5,1fr)">${Object.entries(STATUS).map(([k, s]) =>
+      <div class="grid-4 grid-5">${Object.entries(STATUS).map(([k, s]) =>
         kpi(`${s.icon} ${s.label}`, counts[k] || 0, s.desc)).join('')}</div>
       <div class="filter-row" style="margin-top:16px" id="srcFilter">
         <button class="chip active" data-st="all">All</button>${Object.entries(STATUS).map(([k, s]) => `<button class="chip" data-st="${k}">${s.label}</button>`).join('')}

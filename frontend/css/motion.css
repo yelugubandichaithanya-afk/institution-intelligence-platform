@@ -92,31 +92,22 @@
 
 /* ------------------------------------------------------------ interactive feedback */
 .btn { transition: transform .15s ease, translate .35s var(--ease-out), background-color .2s ease; }
-.btn:hover { background: #0077ed; }
 .btn.is-magnet { transition: transform .15s ease, translate .12s linear, background-color .2s ease; }
 .btn-ghost { transition: transform .15s ease, background-color .2s ease, color .2s ease; }
-.btn-ghost:hover:not(:disabled) { background: var(--accent-soft); }
-.profile-head .btn-ghost:hover:not(:disabled) { background: rgba(41, 151, 255, .12); }
 .chip { transition: transform .15s ease, border-color .2s ease, background-color .2s ease; }
-.chip:hover { border-color: var(--ink-48); }
 
-.inst-card.in:hover { transform: translateY(-4px); border-color: #c7c7cc; }
 .motion .inst-card { transition: opacity .75s var(--ease-out) var(--d, 0ms), transform .45s var(--ease-out), border-color .25s ease; }
 .inst-card .stats b { transition: color .25s ease; }
-.inst-card:hover .stats b { color: var(--primary); }
 .cmp-toggle { transition: transform .15s ease, border-color .2s ease; }
 .cmp-toggle:active { transform: scale(.95); }
 
 .kpi { transition: transform .35s var(--ease-out), background-color .25s ease; }
-.kpi.in:hover { transform: translateY(-2px); background: #efeff2; }
-.flag.in:hover { transform: translateX(3px); }
 
 .sidenav a { transition: color .2s ease, background-color .25s ease, padding-left .3s var(--ease-out); }
 .sidenav a.active { padding-left: 16px; }
 .topnav a, .subnav-actions a { transition: color .2s ease; }
 
 table.data tbody tr { transition: background-color .2s ease; }
-table.data tbody tr:hover { background: var(--pearl); }
 .cmp-table td.best { transition: background-color .4s ease; }
 
 .pick-chip { animation: chip-in .45s var(--ease-spring) both; }
@@ -133,10 +124,24 @@ table.data tbody tr:hover { background: var(--pearl); }
 @keyframes shake-in { 0% { opacity: 0; transform: translateY(-6px); } 60% { transform: translateX(3px); } 100% { opacity: 1; transform: none; } }
 
 /* Evidence tooltip: fade + rise instead of snapping */
-.ev-tip { display: block; opacity: 0; visibility: hidden; transform: translate(-50%, 6px); transition: opacity .18s ease, transform .22s var(--ease-out), visibility .18s; }
-.ev:hover .ev-tip, .ev:focus .ev-tip { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.ev:hover .ev-tip, .ev:focus .ev-tip { animation: tip-in .22s var(--ease-out) both; }
+@keyframes tip-in { from { opacity: 0; translate: 0 6px; } }
 .ev-dot { transition: transform .25s var(--ease-spring); }
-.ev:hover .ev-dot { transform: scale(1.6); }
+
+/* Hover feedback — only on devices that really hover (avoids "stuck" states after a tap) */
+@media (hover: hover) {
+  .btn:hover { background: #0077ed; }
+  .btn-ghost:hover:not(:disabled) { background: var(--accent-soft); }
+  .profile-head .btn-ghost:hover:not(:disabled) { background: rgba(41, 151, 255, .12); }
+  .chip:hover { border-color: var(--ink-48); }
+  .inst-card.in:hover { transform: translateY(-4px); border-color: #c7c7cc; }
+  .inst-card:hover .stats b { color: var(--primary); }
+  .kpi.in:hover { transform: translateY(-2px); background: #efeff2; }
+  .flag.in:hover { transform: translateX(3px); }
+  table.data tbody tr:hover { background: var(--pearl); }
+  .ev:hover .ev-dot { transform: scale(1.6); }
+}
+.ev:focus .ev-dot { transform: scale(1.6); }
 
 /* Loading shimmer */
 .loading { position: relative; }

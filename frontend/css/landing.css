@@ -70,7 +70,7 @@
 
 /* 2 · Statement — words light up as you scroll */
 .l-statement { height: 260vh; padding: 0; background: var(--black); }
-.l-statement .sticky { position: sticky; top: 0; height: 100vh; display: grid; place-items: center; padding: 0 22px; }
+.l-statement .sticky { position: sticky; top: 0; height: 100vh; height: 100svh; display: grid; place-items: center; padding: 0 22px; }
 .highlight-text { font-family: var(--font-display); font-size: 52px; font-weight: 600; line-height: 1.16; letter-spacing: -0.4px; max-width: 980px; margin: 0; text-align: left; }
 .highlight-text .w { color: #3a3a3c; transition: color .35s ease; }
 .highlight-text .w.lit { color: #f5f5f7; }
@@ -94,7 +94,7 @@
 
 /* 4 · Modules gallery — horizontal scroll driven by vertical scroll */
 .l-gallery { height: 340vh; padding: 0; background: var(--tile-1); color: #fff; }
-.l-gallery .sticky { position: sticky; top: 44px; height: calc(100vh - 44px); display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.l-gallery .sticky { position: sticky; top: 44px; height: calc(100vh - 44px); height: calc(100svh - 44px); display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
 .l-gallery .gallery-head { text-align: center; padding: 0 22px; }
 .gallery-track { display: flex; gap: 20px; padding: 56px max(22px, calc((100vw - 1068px) / 2)); will-change: transform; }
 .module-card {
@@ -103,7 +103,7 @@
   transition: transform .4s var(--ease-out), background-color .3s ease;
 }
 .module-card:nth-child(even) { background: var(--tile-3); }
-.module-card:hover { transform: translateY(-6px); background: #323235; }
+@media (hover: hover) { .module-card:hover { transform: translateY(-6px); background: #323235; } }
 .module-card .num { font-size: 12px; color: var(--ink-48); letter-spacing: 0; }
 .module-card h3 { font-size: 28px; line-height: 1.14; letter-spacing: 0.196px; }
 .module-card p { margin: 0; color: var(--body-muted-dark); font-size: 17px; line-height: 1.47; }
@@ -166,6 +166,7 @@
 .landing-footer { background: var(--parchment); color: var(--ink-48); font-size: 12px; letter-spacing: -0.12px; padding: 32px 22px 40px; }
 .landing-footer .l-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--hairline); padding-top: 18px; }
 .landing-footer a { color: var(--ink-80); }
+@media (pointer: coarse) { .landing-footer a { display: inline-flex; align-items: center; min-height: 44px; } }
 
 /* Responsive */
 @media (max-width: 1068px) {
