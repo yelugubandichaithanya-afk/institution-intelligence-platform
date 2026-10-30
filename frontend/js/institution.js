@@ -12,19 +12,19 @@
   function header(inst, r) {
     return `<div class="profile-head">
       <div>
-        <div class="breadcrumb"><a href="index.html">Search</a> / ${esc(inst.state)} / ${esc(inst.city)}</div>
+        <div class="breadcrumb"><a href="index.html">Search</a> › ${esc(inst.state)} › ${esc(inst.city)}</div>
         <h1>${esc(inst.name)}</h1>
         <div class="meta">
-          <span>📍 ${esc(inst.city)}, ${esc(inst.state)}</span><span>🏷 AISHE ${esc(inst.aishe)}</span>
-          <span>🎓 ${esc(inst.university)}</span><span>📅 Est. ${inst.established}</span><span>🌐 ${esc(inst.website)}</span>
+          <span>${esc(inst.city)}, ${esc(inst.state)}</span><span>AISHE ${esc(inst.aishe)}</span>
+          <span>${esc(inst.university)}</span><span>Est. ${inst.established}</span><span>${esc(inst.website)}</span>
         </div>
       </div>
       <div style="text-align:right">
         <span class="pill ${r.overall.key}" style="font-size:14px;padding:6px 14px">${r.overall.icon} Overall: ${r.overall.label}</span>
-        <div class="small muted" style="margin-top:8px">${r.counts.critical} critical · ${r.counts.attention} attention · ${r.counts.ok} verified</div>
-        <div class="no-print" style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+        <div class="small muted" style="margin-top:10px">${r.counts.critical} critical · ${r.counts.attention} attention · ${r.counts.ok} verified</div>
+        <div class="no-print" style="margin-top:16px;display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap">
           <button type="button" class="btn-ghost" id="cmpBtn"></button>
-          <a class="btn-ghost" id="cmpGo" href="compare.html">Open compare →</a>
+          <a class="btn-ghost" id="cmpGo" href="compare.html">Open compare</a>
         </div>
       </div>
     </div>`;
@@ -40,7 +40,7 @@
     const oppCls = { High: 'green', Medium: 'amber', Low: 'red' }[r.opportunity.level];
 
     return `<section class="card" id="executive">
-      <h2>🏛 ${esc(inst.shortName)} — Executive Profile</h2>
+      <h2>Executive view</h2>
       <p class="sub">One-screen view. Hover any value with a coloured dot to see its source, date and verification status.</p>
       <div class="exec-grid">
         <div class="panel"><h4>Executive snapshot</h4>
@@ -93,7 +93,7 @@
     const maxIntake = Math.max(...active.map((c) => c.intake));
 
     return `<section class="card" id="admissions">
-      <h2>📊 Admission Intelligence — 5 Years</h2>
+      <h2>Admissions. Five years.</h2>
       <p class="sub">Approved intake vs university-verified admissions. College-claimed figures are shown separately and never mixed with verified data.</p>
       <div class="grid-4">
         ${kpi('5-yr avg utilisation', Fmt.pct(m.avgUtil))}
@@ -155,7 +155,7 @@
     const gap = m.plVerified ? m.lastClaim - m.lastPl : null;
 
     return `<section class="card" id="placements">
-      <h2>🎓 Placement Intelligence</h2>
+      <h2>Placements.</h2>
       <p class="sub">Verified placement (NIRF / AISHE submissions) compared against claims on the college website.</p>
 
       <div class="variance">
@@ -207,7 +207,7 @@
   function rankings(inst) {
     const years = Object.values(inst.nirf)[0].map((r) => r.year);
     return `<section class="card" id="rankings">
-      <h2>🏆 Ranking & Accreditation — 5 Years</h2>
+      <h2>Rankings &amp; accreditation.</h2>
       <p class="sub">NIRF timeline across applicable categories, plus current statutory approvals and accreditation validity.</p>
       <h3>NIRF timeline</h3>
       <div class="table-wrap"><div class="timeline">
@@ -237,7 +237,7 @@
     const list = (arr) => arr.length ? `<ul style="margin:0;padding-left:18px">${arr.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '<span class="muted">None on record</span>';
 
     return `<section class="card" id="promoter">
-      <h2>👤 Owner / Promoter Profile</h2>
+      <h2>Owner &amp; promoter.</h2>
       <p class="sub">Separate due-diligence section — not mixed into the institution's performance metrics.</p>
       <div class="grid-3">
         <div class="panel"><h4>Trust / Society</h4>
@@ -277,7 +277,7 @@
   function campus(inst, r) {
     const c = inst.campus, m = r.metrics;
     return `<section class="card" id="campus">
-      <h2>🏫 Campus Health Dashboard</h2>
+      <h2>Campus health.</h2>
       <p class="sub">Academic outcomes and infrastructure. Baseline from AISHE; infrastructure confirmed during campus visit where noted.</p>
       <h3>Academic</h3>
       <div class="grid-4">
@@ -311,7 +311,7 @@
     const revPerStudent = cm.avgFee.v * (1 - cm.scholarshipPct.v / 100 * 0.5) * (1 - cm.discountPct.v / 100);
     const oppCls = { High: 'green', Medium: 'amber', Low: 'red' }[r.opportunity.level];
     return `<section class="card" id="commercial">
-      <h2>💰 Commercial Intelligence</h2>
+      <h2>Commercial potential.</h2>
       <p class="sub">Revenue potential and growth headroom for partnership decisions.</p>
       <div class="grid-2">
         <div class="panel"><h4>Partnership opportunity</h4>
@@ -361,7 +361,7 @@
           : '<p class="muted small">None</p>'}</div>`;
     };
     return `<section class="card" id="risk">
-      <h2>⚠️ Risk & Red-Flag Centre</h2>
+      <h2>Risk &amp; red flags.</h2>
       <p class="sub">Rule-based indicators with their underlying evidence. No single automated score — leadership makes the commercial call.</p>
       <div class="risk-cols">${col('critical', '🔴 Critical')}${col('attention', '🟠 Attention')}${col('ok', '🟢 Verified')}</div>
     </section>`;
@@ -372,7 +372,7 @@
     const rows = Evidence.log;
     const counts = rows.reduce((a, e) => ((a[e.st] = (a[e.st] || 0) + 1), a), {});
     return `<section class="card" id="sources">
-      <h2>🔍 Source & Verification Layer</h2>
+      <h2>Sources &amp; verification.</h2>
       <p class="sub">Every number on this profile with its source, date and verification status (${rows.length} data points).</p>
       <div class="grid-4" style="grid-template-columns:repeat(5,1fr)">${Object.entries(STATUS).map(([k, s]) =>
         kpi(`${s.icon} ${s.label}`, counts[k] || 0, s.desc)).join('')}</div>
@@ -432,7 +432,11 @@
       Evidence.reset();
       // Detailed sections first so the evidence log is complete before Sources renders.
       const body = [admissions(inst, r), placements(inst, r), rankings(inst), promoter(inst), campus(inst, r), commercial(inst, r), riskCentre(r)].join('');
-      root.innerHTML = header(inst, r) + executive(inst, r) + body + sources();
+      const hero = document.getElementById('profileHero');
+      hero.innerHTML = header(inst, r);
+      hero.hidden = false;
+      document.getElementById('subnavTitle').textContent = inst.shortName;
+      root.innerHTML = executive(inst, r) + body + sources();
       const crit = document.getElementById('critCount');
       if (r.counts.critical) { crit.textContent = r.counts.critical; crit.hidden = false; }
       bindSourceFilter();

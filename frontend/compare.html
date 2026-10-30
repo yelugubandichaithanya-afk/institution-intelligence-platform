@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compare Institutions · IIP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -20,22 +20,30 @@
     </nav>
     <div class="user-menu" id="userMenu"></div>
   </header>
-  <div class="sample-banner">Showing fictional sample data. No real institutions, people or organisations are represented.</div>
 
-  <main class="container wide">
-    <div class="section-head">
-      <h2>⚖️ Compare institutions</h2>
-      <button class="btn-ghost no-print" onclick="window.print()">🖨 Print comparison</button>
+  <div class="subnav">
+    <span class="subnav-title">Compare</span>
+    <div class="subnav-actions">
+      <a href="index.html">Find institutions</a>
+      <button type="button" class="btn" onclick="window.print()">Print comparison</button>
     </div>
+  </div>
+
+  <section class="tile tile-parchment" style="padding-bottom:40px">
+    <h1>Side by side.</h1>
+    <p class="lead">Choose two to four institutions. The strongest value in every row is highlighted.</p>
+  </section>
+
+  <main class="container wide" style="padding-top:0">
     <div class="card picker no-print">
       <div class="picker-row" id="picked"></div>
       <select id="addSelect" aria-label="Add institution to compare"></select>
-      <p class="small muted" style="margin:10px 0 0">Select 2–4 institutions. Best value in each row is highlighted in green. Hover values with a coloured dot to see their source.</p>
+      <p class="small muted" style="margin:4px 0 0">Hover any value with a coloured dot to see its source and verification status.</p>
     </div>
     <div id="compare"></div>
   </main>
 
-  <footer class="footer">Institution Intelligence Platform · College project prototype</footer>
+  <footer class="footer">Institution Intelligence Platform · Fictional sample data — no real institutions, people or organisations are represented.</footer>
 
   <script src="js/config.js"></script>
   <script src="js/utils.js"></script>

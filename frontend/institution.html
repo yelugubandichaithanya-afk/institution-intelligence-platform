@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Institution Profile · IIP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -19,30 +19,43 @@
       <a href="compare.html">Compare</a>
     </nav>
     <form class="topbar-search" action="index.html">
-      <input name="q" type="search" placeholder="Search another institution…" aria-label="Search">
+      <input name="q" type="search" placeholder="Search institutions" aria-label="Search">
     </form>
     <div class="user-menu" id="userMenu"></div>
   </header>
-  <div class="sample-banner">Showing fictional sample data. No real institutions, people or organisations are represented.</div>
+
+  <div class="subnav">
+    <span class="subnav-title" id="subnavTitle">Institution</span>
+    <div class="subnav-actions">
+      <a href="#executive">Overview</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#placements">Placements</a>
+      <a href="#risk">Risk</a>
+      <button type="button" class="btn" onclick="window.print()">Executive brief</button>
+    </div>
+  </div>
+
+  <section class="tile tile-dark profile-hero" id="profileHero" hidden></section>
 
   <div class="layout">
     <nav class="sidenav" id="sidenav">
-      <a href="#executive">🏛 Executive View</a>
-      <a href="#admissions">📊 Admissions</a>
-      <a href="#placements">🎓 Placements</a>
-      <a href="#rankings">🏆 Rankings & Accreditation</a>
-      <a href="#promoter">👤 Promoter Profile</a>
-      <a href="#campus">🏫 Campus Health</a>
-      <a href="#commercial">💰 Commercial</a>
-      <a href="#risk">⚠️ Risk Centre <span class="count" id="critCount" hidden></span></a>
-      <a href="#sources">🔍 Sources</a>
+      <a href="#executive">Executive view</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#placements">Placements</a>
+      <a href="#rankings">Rankings &amp; accreditation</a>
+      <a href="#promoter">Promoter profile</a>
+      <a href="#campus">Campus health</a>
+      <a href="#commercial">Commercial</a>
+      <a href="#risk">Risk centre <span class="count" id="critCount" hidden></span></a>
+      <a href="#sources">Sources</a>
       <div class="sidenav-actions">
-        <button class="btn-ghost" onclick="window.print()">🖨 Executive brief (PDF)</button>
-        <a class="btn-ghost" href="index.html" style="text-align:center">← Back to search</a>
+        <a class="btn-ghost" href="index.html">Back to search</a>
       </div>
     </nav>
     <main id="profile"><div class="loading">Loading institution…</div></main>
   </div>
+
+  <footer class="footer">Institution Intelligence Platform · Fictional sample data — no real institutions, people or organisations are represented.</footer>
 
   <script src="js/config.js"></script>
   <script src="js/utils.js"></script>

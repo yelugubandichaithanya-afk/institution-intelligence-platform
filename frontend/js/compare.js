@@ -125,7 +125,7 @@
   }
 
   function flags(list) {
-    return `<div class="card"><h2>⚠️ Key red flags</h2><p class="sub">Critical and attention items for each institution</p>
+    return `<div class="card"><h2>Key red flags</h2><p class="sub">Critical and attention items for each institution</p>
       <div class="cmp-flags" style="grid-template-columns:repeat(${list.length},1fr)">${list.map(({ inst, r }, n) => {
         const items = r.flags.filter((f) => f.level !== 'ok');
         return `<div><h4><i class="dot" style="background:${COLORS[n]}"></i>${esc(inst.shortName)}</h4>
