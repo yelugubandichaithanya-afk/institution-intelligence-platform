@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institution Profile · IIP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">IIP</span>
+      <span>Institution Intelligence<small>One Search. One Profile. One Executive View.</small></span>
+    </a>
+    <nav class="topnav">
+      <a href="index.html">Search</a>
+      <a href="compare.html">Compare</a>
+    </nav>
+    <form class="topbar-search" action="index.html">
+      <input name="q" type="search" placeholder="Search another institution…" aria-label="Search">
+    </form>
+    <div class="user-menu" id="userMenu"></div>
+  </header>
+  <div class="sample-banner">Showing fictional sample data. No real institutions, people or organisations are represented.</div>
+
+  <div class="layout">
+    <nav class="sidenav" id="sidenav">
+      <a href="#executive">🏛 Executive View</a>
+      <a href="#admissions">📊 Admissions</a>
+      <a href="#placements">🎓 Placements</a>
+      <a href="#rankings">🏆 Rankings & Accreditation</a>
+      <a href="#promoter">👤 Promoter Profile</a>
+      <a href="#campus">🏫 Campus Health</a>
+      <a href="#commercial">💰 Commercial</a>
+      <a href="#risk">⚠️ Risk Centre <span class="count" id="critCount" hidden></span></a>
+      <a href="#sources">🔍 Sources</a>
+      <div class="sidenav-actions">
+        <button class="btn-ghost" onclick="window.print()">🖨 Executive brief (PDF)</button>
+        <a class="btn-ghost" href="index.html" style="text-align:center">← Back to search</a>
+      </div>
+    </nav>
+    <main id="profile"><div class="loading">Loading institution…</div></main>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/risk.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/institution.js"></script>
+</body>
+</html>

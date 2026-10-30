@@ -1,0 +1,3356 @@
+{
+ "institutions": [
+  {
+   "id": "dvit",
+   "name": "Deccan Valley Institute of Technology",
+   "shortName": "DVIT",
+   "aishe": "C-90231",
+   "city": "Hyderabad",
+   "state": "Telangana",
+   "established": 2004,
+   "ownership": "Private Trust",
+   "category": "Engineering",
+   "university": "Krishna Godavari Technological University",
+   "campusStatus": "Operational",
+   "website": "www.dvit-sample.edu.in",
+   "regulatory": [
+    {
+     "body": "UGC",
+     "item": "Recognition u/s 2(f)",
+     "value": {
+      "v": "Recognised",
+      "src": "UGC HEI List",
+      "date": "2026-07-10",
+      "st": "govt"
+     },
+     "state": "ok"
+    },
+    {
+     "body": "AICTE",
+     "item": "Extension of Approval 2026-27",
+     "value": {
+      "v": "Approved",
+      "src": "AICTE Portal",
+      "date": "2026-06-02",
+      "st": "govt"
+     },
+     "state": "ok"
+    },
+    {
+     "body": "University",
+     "item": "Affiliation",
+     "value": {
+      "v": "Affiliated (permanent)",
+      "src": "University Portal",
+      "date": "2026-08-14",
+      "st": "verified"
+     },
+     "state": "ok",
+     "affiliation": true
+    },
+    {
+     "body": "NAAC",
+     "item": "Accreditation",
+     "value": {
+      "v": "B++ (CGPA 2.86)",
+      "src": "NAAC Portal",
+      "date": "2022-03-18",
+      "st": "govt"
+     },
+     "validUntil": "2027-03-17",
+     "state": "ok",
+     "naac": true
+    },
+    {
+     "body": "NBA",
+     "item": "CSE, ECE",
+     "value": {
+      "v": "Accredited",
+      "src": "NBA Portal",
+      "date": "2023-06-20",
+      "st": "govt"
+     },
+     "validUntil": "2026-06-30",
+     "state": "expired"
+    },
+    {
+     "body": "Autonomy",
+     "item": "Autonomous status",
+     "value": {
+      "v": "Not autonomous",
+      "src": "UGC Autonomous Colleges List",
+      "date": "2026-07-10",
+      "st": "govt"
+     },
+     "state": "na"
+    }
+   ],
+   "admissions": [
+    {
+     "year": "2021-22",
+     "intake": {
+      "v": 1080,
+      "src": "AICTE Approval Process",
+      "date": "2021-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 640,
+      "src": "College Website / Prospectus",
+      "date": "2021-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 540,
+      "src": "University Portal",
+      "date": "2022-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2022-23",
+     "intake": {
+      "v": 1080,
+      "src": "AICTE Approval Process",
+      "date": "2022-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 700,
+      "src": "College Website / Prospectus",
+      "date": "2022-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 610,
+      "src": "University Portal",
+      "date": "2023-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2023-24",
+     "intake": {
+      "v": 1080,
+      "src": "AICTE Approval Process",
+      "date": "2023-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 790,
+      "src": "College Website / Prospectus",
+      "date": "2023-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 690,
+      "src": "University Portal",
+      "date": "2024-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2024-25",
+     "intake": {
+      "v": 1200,
+      "src": "AICTE Approval Process",
+      "date": "2024-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 880,
+      "src": "College Website / Prospectus",
+      "date": "2024-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 760,
+      "src": "University Portal",
+      "date": "2025-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2025-26",
+     "intake": {
+      "v": 1200,
+      "src": "AICTE Approval Process",
+      "date": "2025-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 950,
+      "src": "College Website / Prospectus",
+      "date": "2025-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 820,
+      "src": "University Portal",
+      "date": "2026-09-23",
+      "st": "verified"
+     }
+    }
+   ],
+   "courses": [
+    {
+     "name": "B.Tech CSE",
+     "level": "UG",
+     "duration": 4,
+     "intake": 360,
+     "admitted": 340,
+     "status": "active"
+    },
+    {
+     "name": "B.Tech CSE (AI & ML)",
+     "level": "UG",
+     "duration": 4,
+     "intake": 180,
+     "admitted": 165,
+     "status": "new",
+     "since": "2023-24"
+    },
+    {
+     "name": "B.Tech CSE (Data Science)",
+     "level": "UG",
+     "duration": 4,
+     "intake": 60,
+     "admitted": 58,
+     "status": "new",
+     "since": "2024-25"
+    },
+    {
+     "name": "B.Tech ECE",
+     "level": "UG",
+     "duration": 4,
+     "intake": 180,
+     "admitted": 96,
+     "status": "active"
+    },
+    {
+     "name": "B.Tech EEE",
+     "level": "UG",
+     "duration": 4,
+     "intake": 120,
+     "admitted": 38,
+     "status": "active"
+    },
+    {
+     "name": "B.Tech Mechanical",
+     "level": "UG",
+     "duration": 4,
+     "intake": 120,
+     "admitted": 25,
+     "status": "active"
+    },
+    {
+     "name": "B.Tech IT",
+     "level": "UG",
+     "duration": 4,
+     "intake": 120,
+     "admitted": 80,
+     "status": "active"
+    },
+    {
+     "name": "MBA",
+     "level": "PG",
+     "duration": 2,
+     "intake": 60,
+     "admitted": 18,
+     "status": "active"
+    },
+    {
+     "name": "B.Tech Civil",
+     "level": "UG",
+     "duration": 4,
+     "intake": 0,
+     "admitted": 0,
+     "status": "discontinued",
+     "since": "2024-25"
+    }
+   ],
+   "coursesSource": {
+    "v": "Course-wise 2025-26",
+    "src": "University Portal",
+    "date": "2026-09-23",
+    "st": "verified"
+   },
+   "placements": [
+    {
+     "year": 2021,
+     "eligible": {
+      "v": 330,
+      "src": "NIRF Data Submission",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 205,
+      "src": "NIRF Data Submission",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 85,
+      "src": "College Website",
+      "date": "2021-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 12,
+      "src": "NIRF Data Submission",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 4.1,
+      "src": "NIRF Data Submission",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 3.6,
+      "src": "NIRF Data Submission",
+      "date": "2021-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2022,
+     "eligible": {
+      "v": 350,
+      "src": "NIRF Data Submission",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 231,
+      "src": "NIRF Data Submission",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 88,
+      "src": "College Website",
+      "date": "2022-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 14,
+      "src": "NIRF Data Submission",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 4.4,
+      "src": "NIRF Data Submission",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 3.9,
+      "src": "NIRF Data Submission",
+      "date": "2022-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2023,
+     "eligible": {
+      "v": 365,
+      "src": "NIRF Data Submission",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 241,
+      "src": "NIRF Data Submission",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 90,
+      "src": "College Website",
+      "date": "2023-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 15,
+      "src": "NIRF Data Submission",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 4.5,
+      "src": "NIRF Data Submission",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 4,
+      "src": "NIRF Data Submission",
+      "date": "2023-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2024,
+     "eligible": {
+      "v": 380,
+      "src": "NIRF Data Submission",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 260,
+      "src": "NIRF Data Submission",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 92,
+      "src": "College Website",
+      "date": "2024-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 16,
+      "src": "NIRF Data Submission",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 4.8,
+      "src": "NIRF Data Submission",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 4.2,
+      "src": "NIRF Data Submission",
+      "date": "2024-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2025,
+     "eligible": {
+      "v": 400,
+      "src": "NIRF Data Submission",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 292,
+      "src": "NIRF Data Submission",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 92,
+      "src": "College Website",
+      "date": "2025-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 18,
+      "src": "NIRF Data Submission",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 5.2,
+      "src": "NIRF Data Submission",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 4.6,
+      "src": "NIRF Data Submission",
+      "date": "2025-09-30",
+      "st": "verified"
+     }
+    }
+   ],
+   "recruiters": {
+    "total": {
+     "v": 86,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "repeat": {
+     "v": 54,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "newCount": {
+     "v": 32,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "international": {
+     "v": 2,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "top": [
+     "Nimbus Tech Services",
+     "Orbit Infosystems",
+     "Kaveri Bank",
+     "Peakline Consulting",
+     "Bluegrid Software",
+     "Sahyadri Motors",
+     "Tanvi Analytics",
+     "Indus Ledger Finance"
+    ],
+    "internships": [
+     "Bluegrid Software",
+     "Tanvi Analytics",
+     "Hexa Robotics Labs",
+     "Kaveri Bank"
+    ],
+    "sectors": {
+     "IT": 58,
+     "BFSI": 17,
+     "Core": 11,
+     "Services": 14
+    },
+    "locations": {
+     "Hyderabad": 48,
+     "Bengaluru": 27,
+     "Chennai": 9,
+     "Pune": 8,
+     "Others": 8
+    }
+   },
+   "nirf": {
+    "Engineering": [
+     {
+      "year": 2022,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2022-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2023,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2023-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2024,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2024-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2025,
+      "rank": {
+       "v": "201-300",
+       "src": "NIRF",
+       "date": "2025-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2026,
+      "rank": {
+       "v": "151-200",
+       "src": "NIRF",
+       "date": "2026-08-13",
+       "st": "govt"
+      }
+     }
+    ],
+    "Overall": [
+     {
+      "year": 2022,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2022-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2023,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2023-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2024,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2024-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2025,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2025-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2026,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2026-08-13",
+       "st": "govt"
+      }
+     }
+    ]
+   },
+   "promoter": {
+    "trust": "Deccan Valley Educational Trust",
+    "entityType": "Registered Public Trust",
+    "trustEstablished": 1998,
+    "registration": {
+     "v": "Reg. No. 412/1998",
+     "src": "Registrar of Trusts",
+     "date": "2026-08-01",
+     "st": "verified"
+    },
+    "promoters": [
+     {
+      "name": "K. Raghava Rao",
+      "role": "Founder & Chairman"
+     },
+     {
+      "name": "S. Lakshmi Prasanna",
+      "role": "Secretary & Correspondent"
+     }
+    ],
+    "board": [
+     "K. Raghava Rao",
+     "S. Lakshmi Prasanna",
+     "Dr. M. Venkat Reddy",
+     "P. Anitha Kumari",
+     "R. Srinivas Goud"
+    ],
+    "keyManagement": [
+     {
+      "name": "Dr. A. Sudhakar",
+      "role": "Principal"
+     },
+     {
+      "name": "V. Harish Kumar",
+      "role": "Director, Training & Placement"
+     },
+     {
+      "name": "N. Kavitha",
+      "role": "Finance Controller"
+     }
+    ],
+    "otherInstitutions": [
+     "Deccan Valley Polytechnic (2008)",
+     "DV Junior College (2001)"
+    ],
+    "otherBusinesses": [
+     "DV Infra Developers Pvt Ltd — real estate (Director: K. Raghava Rao)"
+    ],
+    "previousInstitutions": [],
+    "insolvency": {
+     "v": "No records found",
+     "src": "IBBI Public Records",
+     "date": "2026-09-10",
+     "st": "verified"
+    },
+    "legal": [
+     {
+      "type": "civil_dispute",
+      "party": "Trust",
+      "title": "Land boundary suit over 1.2 acres of campus land",
+      "forum": "City Civil Court, Hyderabad",
+      "year": 2019,
+      "status": "Pending",
+      "material": false,
+      "src": "eCourts",
+      "date": "2026-09-10"
+     },
+     {
+      "type": "complaint",
+      "party": "Institution",
+      "title": "Fee refund complaint by parents (6 students)",
+      "forum": "State Fee Regulatory Committee",
+      "year": 2024,
+      "status": "Disposed — refund ordered",
+      "material": false,
+      "src": "Committee Order",
+      "date": "2024-12-05"
+     }
+    ]
+   },
+   "campus": {
+    "students": {
+     "v": 3120,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "faculty": {
+     "v": 178,
+     "src": "AICTE Faculty Portal",
+     "date": "2026-06-02",
+     "st": "govt"
+    },
+    "facultyAttrition": {
+     "v": 14,
+     "src": "Management Discussion",
+     "date": "2026-09-18",
+     "st": "internal"
+    },
+    "attendance": {
+     "v": 78,
+     "src": "College MIS",
+     "date": "2026-09-18",
+     "st": "self"
+    },
+    "passPct": {
+     "v": 71,
+     "src": "University Results Portal",
+     "date": "2026-07-30",
+     "st": "verified"
+    },
+    "backlogs": {
+     "v": 18,
+     "src": "University Results Portal",
+     "date": "2026-07-30",
+     "st": "verified"
+    },
+    "dropouts": {
+     "v": 6.2,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "graduationRate": {
+     "v": 82,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "higherStudies": {
+     "v": 9,
+     "src": "NIRF Data Submission",
+     "date": "2025-12-15",
+     "st": "govt"
+    },
+    "land": {
+     "v": 22,
+     "src": "AICTE Mandatory Disclosure",
+     "date": "2026-06-02",
+     "st": "self"
+    },
+    "builtUp": {
+     "v": 410000,
+     "src": "AICTE Mandatory Disclosure",
+     "date": "2026-06-02",
+     "st": "self"
+    },
+    "classrooms": {
+     "v": 72,
+     "src": "AICTE Mandatory Disclosure",
+     "date": "2026-06-02",
+     "st": "self"
+    },
+    "labs": {
+     "v": 48,
+     "src": "AICTE Mandatory Disclosure",
+     "date": "2026-06-02",
+     "st": "self"
+    },
+    "library": {
+     "v": 52000,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "hostelCapacity": {
+     "v": 900,
+     "src": "Campus Visit",
+     "date": "2026-09-18",
+     "st": "internal"
+    },
+    "hostelOccupancy": {
+     "v": 872,
+     "src": "Campus Visit",
+     "date": "2026-09-18",
+     "st": "internal"
+    },
+    "buses": {
+     "v": 28,
+     "src": "Campus Visit",
+     "date": "2026-09-18",
+     "st": "internal"
+    },
+    "sports": "Cricket ground, 2 basketball courts, indoor games block"
+   },
+   "commercial": {
+    "capacity": {
+     "v": 4680,
+     "src": "AICTE Approval Process",
+     "date": "2026-06-02",
+     "st": "govt"
+    },
+    "avgFee": {
+     "v": 1.35,
+     "src": "State Fee Regulatory Committee",
+     "date": "2025-07-01",
+     "st": "govt"
+    },
+    "collectionEfficiency": {
+     "v": 88,
+     "src": "Management Discussion",
+     "date": "2026-09-18",
+     "st": "internal"
+    },
+    "outstanding": {
+     "v": 4.2,
+     "src": "Management Discussion",
+     "date": "2026-09-18",
+     "st": "internal"
+    },
+    "scholarshipPct": {
+     "v": 38,
+     "src": "Management Discussion",
+     "date": "2026-09-18",
+     "st": "internal"
+    },
+    "discountPct": {
+     "v": 6,
+     "src": "Management Discussion",
+     "date": "2026-09-18",
+     "st": "internal"
+    },
+    "refunds": {
+     "v": 0.45,
+     "src": "Management Discussion",
+     "date": "2026-09-18",
+     "st": "internal"
+    },
+    "courseFees": [
+     {
+      "course": "B.Tech (all branches)",
+      "fee": 1.35
+     },
+     {
+      "course": "MBA",
+      "fee": 0.95
+     }
+    ]
+   },
+   "internal": {
+    "visitDate": "2026-09-18",
+    "visitedBy": "Partnerships Team (South)",
+    "notes": "Management open to a co-delivered CSE specialisation track. Hostel near full; expansion planned for 2027. Placement team small (4 FTE) relative to batch size.",
+    "partnershipHistory": "No prior partnership."
+   }
+  },
+  {
+   "id": "aset",
+   "name": "Aravalli School of Engineering & Technology",
+   "shortName": "ASET",
+   "aishe": "C-41877",
+   "city": "Jaipur",
+   "state": "Rajasthan",
+   "established": 1998,
+   "ownership": "Registered Society",
+   "category": "Engineering",
+   "university": "Aravalli Technical University",
+   "campusStatus": "Operational",
+   "website": "www.aset-sample.ac.in",
+   "regulatory": [
+    {
+     "body": "UGC",
+     "item": "Recognition u/s 2(f) & 12(B)",
+     "value": {
+      "v": "Recognised",
+      "src": "UGC HEI List",
+      "date": "2026-07-10",
+      "st": "govt"
+     },
+     "state": "ok"
+    },
+    {
+     "body": "AICTE",
+     "item": "Extension of Approval 2026-27",
+     "value": {
+      "v": "Approved",
+      "src": "AICTE Portal",
+      "date": "2026-05-28",
+      "st": "govt"
+     },
+     "state": "ok"
+    },
+    {
+     "body": "University",
+     "item": "Affiliation",
+     "value": {
+      "v": "Affiliated (permanent)",
+      "src": "University Portal",
+      "date": "2026-08-02",
+      "st": "verified"
+     },
+     "state": "ok",
+     "affiliation": true
+    },
+    {
+     "body": "NAAC",
+     "item": "Accreditation",
+     "value": {
+      "v": "A (CGPA 3.24)",
+      "src": "NAAC Portal",
+      "date": "2023-12-04",
+      "st": "govt"
+     },
+     "validUntil": "2028-12-03",
+     "state": "ok",
+     "naac": true
+    },
+    {
+     "body": "NBA",
+     "item": "CSE, ECE, ME, EE",
+     "value": {
+      "v": "Accredited",
+      "src": "NBA Portal",
+      "date": "2024-07-11",
+      "st": "govt"
+     },
+     "validUntil": "2027-06-30",
+     "state": "ok"
+    },
+    {
+     "body": "Autonomy",
+     "item": "Autonomous status",
+     "value": {
+      "v": "Autonomous (till 2031)",
+      "src": "UGC Autonomous Colleges List",
+      "date": "2026-07-10",
+      "st": "govt"
+     },
+     "state": "ok"
+    }
+   ],
+   "admissions": [
+    {
+     "year": "2021-22",
+     "intake": {
+      "v": 1440,
+      "src": "AICTE Approval Process",
+      "date": "2021-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 1420,
+      "src": "College Website / Prospectus",
+      "date": "2021-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 1310,
+      "src": "University Portal",
+      "date": "2022-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2022-23",
+     "intake": {
+      "v": 1440,
+      "src": "AICTE Approval Process",
+      "date": "2022-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 1450,
+      "src": "College Website / Prospectus",
+      "date": "2022-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 1350,
+      "src": "University Portal",
+      "date": "2023-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2023-24",
+     "intake": {
+      "v": 1440,
+      "src": "AICTE Approval Process",
+      "date": "2023-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 1460,
+      "src": "College Website / Prospectus",
+      "date": "2023-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 1390,
+      "src": "University Portal",
+      "date": "2024-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2024-25",
+     "intake": {
+      "v": 1500,
+      "src": "AICTE Approval Process",
+      "date": "2024-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 1520,
+      "src": "College Website / Prospectus",
+      "date": "2024-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 1430,
+      "src": "University Portal",
+      "date": "2025-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2025-26",
+     "intake": {
+      "v": 1500,
+      "src": "AICTE Approval Process",
+      "date": "2025-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 1530,
+      "src": "College Website / Prospectus",
+      "date": "2025-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 1455,
+      "src": "University Portal",
+      "date": "2026-09-23",
+      "st": "verified"
+     }
+    }
+   ],
+   "courses": [
+    {
+     "name": "B.Tech CSE",
+     "level": "UG",
+     "duration": 4,
+     "intake": 420,
+     "admitted": 418,
+     "status": "active"
+    },
+    {
+     "name": "B.Tech CSE (AI)",
+     "level": "UG",
+     "duration": 4,
+     "intake": 120,
+     "admitted": 120,
+     "status": "new",
+     "since": "2024-25"
+    },
+    {
+     "name": "B.Tech ECE",
+     "level": "UG",
+     "duration": 4,
+     "intake": 240,
+     "admitted": 231,
+     "status": "active"
+    },
+    {
+     "name": "B.Tech Mechanical",
+     "level": "UG",
+     "duration": 4,
+     "intake": 180,
+     "admitted": 162,
+     "status": "active"
+    },
+    {
+     "name": "B.Tech Electrical",
+     "level": "UG",
+     "duration": 4,
+     "intake": 180,
+     "admitted": 168,
+     "status": "active"
+    },
+    {
+     "name": "B.Tech Civil",
+     "level": "UG",
+     "duration": 4,
+     "intake": 120,
+     "admitted": 96,
+     "status": "active"
+    },
+    {
+     "name": "MBA",
+     "level": "PG",
+     "duration": 2,
+     "intake": 180,
+     "admitted": 180,
+     "status": "active"
+    },
+    {
+     "name": "M.Tech (3 specialisations)",
+     "level": "PG",
+     "duration": 2,
+     "intake": 60,
+     "admitted": 30,
+     "status": "active"
+    },
+    {
+     "name": "MCA",
+     "level": "PG",
+     "duration": 2,
+     "intake": 0,
+     "admitted": 0,
+     "status": "discontinued",
+     "since": "2023-24"
+    }
+   ],
+   "coursesSource": {
+    "v": "Course-wise 2025-26",
+    "src": "University Portal",
+    "date": "2026-09-20",
+    "st": "verified"
+   },
+   "placements": [
+    {
+     "year": 2021,
+     "eligible": {
+      "v": 1180,
+      "src": "NIRF Data Submission",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 956,
+      "src": "NIRF Data Submission",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 86,
+      "src": "College Website",
+      "date": "2021-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 24,
+      "src": "NIRF Data Submission",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 6.1,
+      "src": "NIRF Data Submission",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 5.4,
+      "src": "NIRF Data Submission",
+      "date": "2021-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2022,
+     "eligible": {
+      "v": 1210,
+      "src": "NIRF Data Submission",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 1004,
+      "src": "NIRF Data Submission",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 88,
+      "src": "College Website",
+      "date": "2022-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 28,
+      "src": "NIRF Data Submission",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 6.6,
+      "src": "NIRF Data Submission",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 5.8,
+      "src": "NIRF Data Submission",
+      "date": "2022-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2023,
+     "eligible": {
+      "v": 1230,
+      "src": "NIRF Data Submission",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 1009,
+      "src": "NIRF Data Submission",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 86,
+      "src": "College Website",
+      "date": "2023-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 31,
+      "src": "NIRF Data Submission",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 6.8,
+      "src": "NIRF Data Submission",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 6,
+      "src": "NIRF Data Submission",
+      "date": "2023-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2024,
+     "eligible": {
+      "v": 1260,
+      "src": "NIRF Data Submission",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 1071,
+      "src": "NIRF Data Submission",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 89,
+      "src": "College Website",
+      "date": "2024-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 34,
+      "src": "NIRF Data Submission",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 7.2,
+      "src": "NIRF Data Submission",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 6.4,
+      "src": "NIRF Data Submission",
+      "date": "2024-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2025,
+     "eligible": {
+      "v": 1290,
+      "src": "NIRF Data Submission",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 1084,
+      "src": "NIRF Data Submission",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 88,
+      "src": "College Website",
+      "date": "2025-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 38,
+      "src": "NIRF Data Submission",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 7.6,
+      "src": "NIRF Data Submission",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 6.7,
+      "src": "NIRF Data Submission",
+      "date": "2025-09-30",
+      "st": "verified"
+     }
+    }
+   ],
+   "recruiters": {
+    "total": {
+     "v": 212,
+     "src": "NIRF Data Submission",
+     "date": "2025-12-15",
+     "st": "govt"
+    },
+    "repeat": {
+     "v": 161,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "newCount": {
+     "v": 51,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "international": {
+     "v": 14,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "top": [
+     "Orbit Infosystems",
+     "Thar Semiconductors",
+     "Peakline Consulting",
+     "Marwar Power Systems",
+     "Bluegrid Software",
+     "Indus Ledger Finance",
+     "Vertex Automotive",
+     "Nimbus Tech Services"
+    ],
+    "internships": [
+     "Thar Semiconductors",
+     "Vertex Automotive",
+     "Marwar Power Systems",
+     "Bluegrid Software",
+     "Tanvi Analytics"
+    ],
+    "sectors": {
+     "IT": 46,
+     "BFSI": 16,
+     "Core": 27,
+     "Services": 11
+    },
+    "locations": {
+     "Bengaluru": 31,
+     "NCR": 26,
+     "Pune": 14,
+     "Jaipur": 12,
+     "Abroad": 1,
+     "Others": 16
+    }
+   },
+   "nirf": {
+    "Engineering": [
+     {
+      "year": 2022,
+      "rank": {
+       "v": 178,
+       "src": "NIRF",
+       "date": "2022-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2023,
+      "rank": {
+       "v": 165,
+       "src": "NIRF",
+       "date": "2023-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2024,
+      "rank": {
+       "v": 151,
+       "src": "NIRF",
+       "date": "2024-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2025,
+      "rank": {
+       "v": 139,
+       "src": "NIRF",
+       "date": "2025-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2026,
+      "rank": {
+       "v": 132,
+       "src": "NIRF",
+       "date": "2026-08-13",
+       "st": "govt"
+      }
+     }
+    ],
+    "Management": [
+     {
+      "year": 2022,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2022-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2023,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2023-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2024,
+      "rank": {
+       "v": "101-125",
+       "src": "NIRF",
+       "date": "2024-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2025,
+      "rank": {
+       "v": 98,
+       "src": "NIRF",
+       "date": "2025-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2026,
+      "rank": {
+       "v": 94,
+       "src": "NIRF",
+       "date": "2026-08-13",
+       "st": "govt"
+      }
+     }
+    ],
+    "Overall": [
+     {
+      "year": 2022,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2022-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2023,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2023-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2024,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2024-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2025,
+      "rank": {
+       "v": "151-200",
+       "src": "NIRF",
+       "date": "2025-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2026,
+      "rank": {
+       "v": "151-200",
+       "src": "NIRF",
+       "date": "2026-08-13",
+       "st": "govt"
+      }
+     }
+    ]
+   },
+   "promoter": {
+    "trust": "Aravalli Education Society",
+    "entityType": "Society (Rajasthan Societies Registration Act)",
+    "trustEstablished": 1994,
+    "registration": {
+     "v": "Reg. No. 88/JPR/1994",
+     "src": "Registrar of Societies",
+     "date": "2026-08-03",
+     "st": "verified"
+    },
+    "promoters": [
+     {
+      "name": "Dr. Mahendra Singh Rathore",
+      "role": "President"
+     },
+     {
+      "name": "Sunita Agarwal",
+      "role": "Secretary"
+     }
+    ],
+    "board": [
+     "Dr. Mahendra Singh Rathore",
+     "Sunita Agarwal",
+     "Prof. R. K. Joshi (Retd.)",
+     "Ankit Mehta",
+     "Dr. Farah Qureshi",
+     "Col. V. S. Shekhawat (Retd.)"
+    ],
+    "keyManagement": [
+     {
+      "name": "Prof. Deepak Bansal",
+      "role": "Director"
+     },
+     {
+      "name": "Dr. Neha Saxena",
+      "role": "Dean, Corporate Relations"
+     },
+     {
+      "name": "Rohit Jain",
+      "role": "CFO"
+     }
+    ],
+    "otherInstitutions": [
+     "Aravalli Business School (2006)",
+     "Aravalli Public School (1995)"
+    ],
+    "otherBusinesses": [],
+    "previousInstitutions": [],
+    "insolvency": {
+     "v": "No records found",
+     "src": "IBBI Public Records",
+     "date": "2026-09-10",
+     "st": "verified"
+    },
+    "legal": [
+     {
+      "type": "civil_dispute",
+      "party": "Society",
+      "title": "Contract dispute with civil works vendor",
+      "forum": "Commercial Court, Jaipur",
+      "year": 2021,
+      "status": "Settled (2023)",
+      "material": false,
+      "src": "eCourts",
+      "date": "2026-09-10"
+     }
+    ]
+   },
+   "campus": {
+    "students": {
+     "v": 5610,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "faculty": {
+     "v": 392,
+     "src": "AICTE Faculty Portal",
+     "date": "2026-05-28",
+     "st": "govt"
+    },
+    "facultyAttrition": {
+     "v": 8,
+     "src": "Management Discussion",
+     "date": "2026-08-22",
+     "st": "internal"
+    },
+    "attendance": {
+     "v": 86,
+     "src": "College MIS",
+     "date": "2026-08-22",
+     "st": "self"
+    },
+    "passPct": {
+     "v": 89,
+     "src": "University Results Portal",
+     "date": "2026-07-25",
+     "st": "verified"
+    },
+    "backlogs": {
+     "v": 7,
+     "src": "University Results Portal",
+     "date": "2026-07-25",
+     "st": "verified"
+    },
+    "dropouts": {
+     "v": 2.1,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "graduationRate": {
+     "v": 94,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "higherStudies": {
+     "v": 13,
+     "src": "NIRF Data Submission",
+     "date": "2025-12-15",
+     "st": "govt"
+    },
+    "land": {
+     "v": 48,
+     "src": "AICTE Mandatory Disclosure",
+     "date": "2026-05-28",
+     "st": "self"
+    },
+    "builtUp": {
+     "v": 860000,
+     "src": "AICTE Mandatory Disclosure",
+     "date": "2026-05-28",
+     "st": "self"
+    },
+    "classrooms": {
+     "v": 128,
+     "src": "AICTE Mandatory Disclosure",
+     "date": "2026-05-28",
+     "st": "self"
+    },
+    "labs": {
+     "v": 96,
+     "src": "AICTE Mandatory Disclosure",
+     "date": "2026-05-28",
+     "st": "self"
+    },
+    "library": {
+     "v": 118000,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "hostelCapacity": {
+     "v": 1800,
+     "src": "Campus Visit",
+     "date": "2026-08-22",
+     "st": "internal"
+    },
+    "hostelOccupancy": {
+     "v": 1610,
+     "src": "Campus Visit",
+     "date": "2026-08-22",
+     "st": "internal"
+    },
+    "buses": {
+     "v": 42,
+     "src": "Campus Visit",
+     "date": "2026-08-22",
+     "st": "internal"
+    },
+    "sports": "Stadium with athletics track, indoor sports complex, swimming pool"
+   },
+   "commercial": {
+    "capacity": {
+     "v": 5880,
+     "src": "AICTE Approval Process",
+     "date": "2026-05-28",
+     "st": "govt"
+    },
+    "avgFee": {
+     "v": 1.9,
+     "src": "State Fee Regulatory Committee",
+     "date": "2025-07-01",
+     "st": "govt"
+    },
+    "collectionEfficiency": {
+     "v": 95,
+     "src": "Audited Financials FY25",
+     "date": "2026-08-22",
+     "st": "internal"
+    },
+    "outstanding": {
+     "v": 1.8,
+     "src": "Audited Financials FY25",
+     "date": "2026-08-22",
+     "st": "internal"
+    },
+    "scholarshipPct": {
+     "v": 14,
+     "src": "Audited Financials FY25",
+     "date": "2026-08-22",
+     "st": "internal"
+    },
+    "discountPct": {
+     "v": 4,
+     "src": "Management Discussion",
+     "date": "2026-08-22",
+     "st": "internal"
+    },
+    "refunds": {
+     "v": 0.3,
+     "src": "Audited Financials FY25",
+     "date": "2026-08-22",
+     "st": "internal"
+    },
+    "courseFees": [
+     {
+      "course": "B.Tech",
+      "fee": 1.9
+     },
+     {
+      "course": "MBA",
+      "fee": 2.6
+     },
+     {
+      "course": "M.Tech",
+      "fee": 1.2
+     }
+    ]
+   },
+   "internal": {
+    "visitDate": "2026-08-22",
+    "visitedBy": "Partnerships Team (North)",
+    "notes": "Strong, well-run campus operating near full capacity. Growth would need new programmes or a second shift rather than filling seats. Leadership interested in an MBA specialisation partnership.",
+    "partnershipHistory": "Pilot certificate programme 2023 (120 students), renewed 2024."
+   }
+  },
+  {
+   "id": "cips",
+   "name": "Coastal Institute of Pharmaceutical Sciences",
+   "shortName": "CIPS",
+   "aishe": "C-67012",
+   "city": "Visakhapatnam",
+   "state": "Andhra Pradesh",
+   "established": 2011,
+   "ownership": "Private Trust",
+   "category": "Pharmacy",
+   "university": "Andhra Coastal University",
+   "campusStatus": "Operational",
+   "website": "www.cips-sample.edu.in",
+   "regulatory": [
+    {
+     "body": "UGC",
+     "item": "Recognition u/s 2(f)",
+     "value": {
+      "v": "Recognised",
+      "src": "UGC HEI List",
+      "date": "2026-07-10",
+      "st": "govt"
+     },
+     "state": "ok"
+    },
+    {
+     "body": "PCI",
+     "item": "Approval 2026-27",
+     "value": {
+      "v": "Conditional — faculty shortfall",
+      "src": "PCI Approval Portal",
+      "date": "2026-06-18",
+      "st": "govt"
+     },
+     "state": "issue"
+    },
+    {
+     "body": "University",
+     "item": "Affiliation",
+     "value": {
+      "v": "Provisional — renewal pending",
+      "src": "University Portal",
+      "date": "2026-08-30",
+      "st": "verified"
+     },
+     "state": "issue",
+     "affiliation": true
+    },
+    {
+     "body": "NAAC",
+     "item": "Accreditation",
+     "value": {
+      "v": "B (CGPA 2.31)",
+      "src": "NAAC Portal",
+      "date": "2020-01-21",
+      "st": "govt"
+     },
+     "validUntil": "2025-01-20",
+     "state": "expired",
+     "naac": true
+    },
+    {
+     "body": "NBA",
+     "item": "B.Pharm",
+     "value": {
+      "v": "Not accredited",
+      "src": "NBA Portal",
+      "date": "2026-07-01",
+      "st": "govt"
+     },
+     "state": "na"
+    },
+    {
+     "body": "Autonomy",
+     "item": "Autonomous status",
+     "value": {
+      "v": "Not autonomous",
+      "src": "UGC Autonomous Colleges List",
+      "date": "2026-07-10",
+      "st": "govt"
+     },
+     "state": "na"
+    }
+   ],
+   "admissions": [
+    {
+     "year": "2021-22",
+     "intake": {
+      "v": 300,
+      "src": "PCI Approval Portal",
+      "date": "2021-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 260,
+      "src": "College Website / Prospectus",
+      "date": "2021-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 212,
+      "src": "University Portal",
+      "date": "2022-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2022-23",
+     "intake": {
+      "v": 300,
+      "src": "PCI Approval Portal",
+      "date": "2022-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 240,
+      "src": "College Website / Prospectus",
+      "date": "2022-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 186,
+      "src": "University Portal",
+      "date": "2023-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2023-24",
+     "intake": {
+      "v": 300,
+      "src": "PCI Approval Portal",
+      "date": "2023-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 230,
+      "src": "College Website / Prospectus",
+      "date": "2023-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 165,
+      "src": "University Portal",
+      "date": "2024-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2024-25",
+     "intake": {
+      "v": 300,
+      "src": "PCI Approval Portal",
+      "date": "2024-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 220,
+      "src": "College Website / Prospectus",
+      "date": "2024-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 141,
+      "src": "University Portal",
+      "date": "2025-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2025-26",
+     "intake": {
+      "v": 300,
+      "src": "PCI Approval Portal",
+      "date": "2025-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 205,
+      "src": "College Website / Prospectus",
+      "date": "2025-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 124,
+      "src": "University Portal",
+      "date": "2026-09-23",
+      "st": "verified"
+     }
+    }
+   ],
+   "courses": [
+    {
+     "name": "B.Pharm",
+     "level": "UG",
+     "duration": 4,
+     "intake": 200,
+     "admitted": 88,
+     "status": "active"
+    },
+    {
+     "name": "Pharm.D",
+     "level": "UG",
+     "duration": 6,
+     "intake": 30,
+     "admitted": 14,
+     "status": "active"
+    },
+    {
+     "name": "M.Pharm (Pharmaceutics)",
+     "level": "PG",
+     "duration": 2,
+     "intake": 30,
+     "admitted": 12,
+     "status": "active"
+    },
+    {
+     "name": "M.Pharm (Pharmacology)",
+     "level": "PG",
+     "duration": 2,
+     "intake": 15,
+     "admitted": 6,
+     "status": "active"
+    },
+    {
+     "name": "D.Pharm",
+     "level": "Diploma",
+     "duration": 2,
+     "intake": 25,
+     "admitted": 4,
+     "status": "new",
+     "since": "2025-26"
+    },
+    {
+     "name": "M.Pharm (Pharm. Analysis)",
+     "level": "PG",
+     "duration": 2,
+     "intake": 0,
+     "admitted": 0,
+     "status": "discontinued",
+     "since": "2025-26"
+    }
+   ],
+   "coursesSource": {
+    "v": "Course-wise 2025-26",
+    "src": "University Portal",
+    "date": "2026-09-23",
+    "st": "verified"
+   },
+   "placements": [
+    {
+     "year": 2021,
+     "eligible": {
+      "v": 180,
+      "src": "AISHE",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 72,
+      "src": "AISHE",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 78,
+      "src": "College Website",
+      "date": "2021-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 5.5,
+      "src": "AISHE",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 2.8,
+      "src": "AISHE",
+      "date": "2021-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 2.5,
+      "src": "AISHE",
+      "date": "2021-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2022,
+     "eligible": {
+      "v": 175,
+      "src": "AISHE",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 63,
+      "src": "AISHE",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 80,
+      "src": "College Website",
+      "date": "2022-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 5,
+      "src": "AISHE",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 2.7,
+      "src": "AISHE",
+      "date": "2022-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 2.4,
+      "src": "AISHE",
+      "date": "2022-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2023,
+     "eligible": {
+      "v": 170,
+      "src": "AISHE",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 58,
+      "src": "AISHE",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 82,
+      "src": "College Website",
+      "date": "2023-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 4.8,
+      "src": "AISHE",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 2.6,
+      "src": "AISHE",
+      "date": "2023-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 2.4,
+      "src": "AISHE",
+      "date": "2023-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2024,
+     "eligible": {
+      "v": 160,
+      "src": "AISHE",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 50,
+      "src": "AISHE",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 85,
+      "src": "College Website",
+      "date": "2024-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 4.6,
+      "src": "AISHE",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 2.6,
+      "src": "AISHE",
+      "date": "2024-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 2.3,
+      "src": "AISHE",
+      "date": "2024-09-30",
+      "st": "verified"
+     }
+    },
+    {
+     "year": 2025,
+     "eligible": {
+      "v": 150,
+      "src": "AISHE",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "placed": {
+      "v": 42,
+      "src": "AISHE",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "claimedPct": {
+      "v": 85,
+      "src": "College Website",
+      "date": "2025-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 4.2,
+      "src": "AISHE",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "average": {
+      "v": 2.5,
+      "src": "AISHE",
+      "date": "2025-09-30",
+      "st": "verified"
+     },
+     "median": {
+      "v": 2.2,
+      "src": "AISHE",
+      "date": "2025-09-30",
+      "st": "verified"
+     }
+    }
+   ],
+   "recruiters": {
+    "total": {
+     "v": 19,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "repeat": {
+     "v": 9,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "newCount": {
+     "v": 10,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "international": {
+     "v": 0,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "top": [
+     "Godavari Pharma Ltd",
+     "MedLine Retail Pharmacy",
+     "Sagar Biotech",
+     "CareFirst Hospitals",
+     "Nova Clinical Research"
+    ],
+    "internships": [
+     "MedLine Retail Pharmacy",
+     "CareFirst Hospitals"
+    ],
+    "sectors": {
+     "Pharma Mfg": 38,
+     "Retail / Hospital": 44,
+     "Clinical Research": 12,
+     "Others": 6
+    },
+    "locations": {
+     "Visakhapatnam": 52,
+     "Hyderabad": 30,
+     "Others": 18
+    }
+   },
+   "nirf": {
+    "Pharmacy": [
+     {
+      "year": 2022,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2022-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2023,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2023-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2024,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2024-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2025,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2025-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2026,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2026-08-13",
+       "st": "govt"
+      }
+     }
+    ]
+   },
+   "promoter": {
+    "trust": "Coastal Educational & Charitable Trust",
+    "entityType": "Registered Private Trust",
+    "trustEstablished": 2009,
+    "registration": {
+     "v": "Reg. No. 1176/2009",
+     "src": "Registrar of Trusts",
+     "date": "2026-08-30",
+     "st": "verified"
+    },
+    "promoters": [
+     {
+      "name": "B. Surya Narayana",
+      "role": "Managing Trustee"
+     },
+     {
+      "name": "B. Padmavathi",
+      "role": "Trustee"
+     }
+    ],
+    "board": [
+     "B. Surya Narayana",
+     "B. Padmavathi",
+     "G. Kiran Babu"
+    ],
+    "keyManagement": [
+     {
+      "name": "Dr. T. Ravi Teja",
+      "role": "Principal (in-charge since 2025)"
+     },
+     {
+      "name": "M. Swathi",
+      "role": "Administrative Officer"
+     }
+    ],
+    "otherInstitutions": [
+     "Coastal Nursing College (2014)"
+    ],
+    "otherBusinesses": [
+     "Coastal Agro Exports Pvt Ltd (Director: B. Surya Narayana)"
+    ],
+    "previousInstitutions": [
+     "Coastal Degree College (2010–2018, closed)"
+    ],
+    "insolvency": {
+     "v": "No IBC proceedings; bank recovery suit listed below",
+     "src": "IBBI Public Records",
+     "date": "2026-09-12",
+     "st": "verified"
+    },
+    "legal": [
+     {
+      "type": "regulatory_action",
+      "party": "Institution",
+      "title": "Show-cause notice for faculty shortfall and lab deficiencies",
+      "forum": "Pharmacy Council of India",
+      "year": 2025,
+      "status": "Pending — response submitted",
+      "material": true,
+      "src": "PCI Notice",
+      "date": "2025-11-04"
+     },
+     {
+      "type": "fir",
+      "party": "Trust management",
+      "title": "FIR registered on complaint by students alleging admission to an unapproved course",
+      "forum": "Police Station, Visakhapatnam",
+      "year": 2025,
+      "status": "Under investigation — no charge sheet filed",
+      "material": true,
+      "src": "Police FIR record",
+      "date": "2026-02-17"
+     },
+     {
+      "type": "civil_dispute",
+      "party": "Trust",
+      "title": "Loan recovery application by lender bank (₹6.4 Cr)",
+      "forum": "Debts Recovery Tribunal, Visakhapatnam",
+      "year": 2024,
+      "status": "Pending",
+      "material": true,
+      "src": "DRT Cause List",
+      "date": "2026-09-12"
+     },
+     {
+      "type": "acquittal",
+      "party": "Managing Trustee",
+      "title": "Cheque bounce case (s.138 NI Act) — 2017",
+      "forum": "Judicial Magistrate Court",
+      "year": 2017,
+      "status": "Acquitted (2020)",
+      "material": false,
+      "src": "eCourts",
+      "date": "2026-09-12"
+     }
+    ]
+   },
+   "campus": {
+    "students": {
+     "v": 640,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "faculty": {
+     "v": 31,
+     "src": "PCI Approval Portal",
+     "date": "2026-06-18",
+     "st": "govt"
+    },
+    "facultyAttrition": {
+     "v": 26,
+     "src": "Management Discussion",
+     "date": "2026-09-05",
+     "st": "internal"
+    },
+    "attendance": {
+     "v": 69,
+     "src": "College MIS",
+     "date": "2026-09-05",
+     "st": "self"
+    },
+    "passPct": {
+     "v": 58,
+     "src": "University Results Portal",
+     "date": "2026-07-30",
+     "st": "verified"
+    },
+    "backlogs": {
+     "v": 31,
+     "src": "University Results Portal",
+     "date": "2026-07-30",
+     "st": "verified"
+    },
+    "dropouts": {
+     "v": 11.4,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "graduationRate": {
+     "v": 71,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "higherStudies": {
+     "v": 6,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "land": {
+     "v": 6,
+     "src": "PCI Mandatory Disclosure",
+     "date": "2026-06-18",
+     "st": "self"
+    },
+    "builtUp": {
+     "v": 98000,
+     "src": "PCI Mandatory Disclosure",
+     "date": "2026-06-18",
+     "st": "self"
+    },
+    "classrooms": {
+     "v": 14,
+     "src": "PCI Mandatory Disclosure",
+     "date": "2026-06-18",
+     "st": "self"
+    },
+    "labs": {
+     "v": 11,
+     "src": "PCI Mandatory Disclosure",
+     "date": "2026-06-18",
+     "st": "self"
+    },
+    "library": {
+     "v": 9800,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "hostelCapacity": {
+     "v": 300,
+     "src": "Campus Visit",
+     "date": "2026-09-05",
+     "st": "internal"
+    },
+    "hostelOccupancy": {
+     "v": 96,
+     "src": "Campus Visit",
+     "date": "2026-09-05",
+     "st": "internal"
+    },
+    "buses": {
+     "v": 6,
+     "src": "Campus Visit",
+     "date": "2026-09-05",
+     "st": "internal"
+    },
+    "sports": "Open ground (shared with nursing college)"
+   },
+   "commercial": {
+    "capacity": {
+     "v": 1260,
+     "src": "PCI Approval Portal",
+     "date": "2026-06-18",
+     "st": "govt"
+    },
+    "avgFee": {
+     "v": 0.95,
+     "src": "State Fee Regulatory Committee",
+     "date": "2025-07-01",
+     "st": "govt"
+    },
+    "collectionEfficiency": {
+     "v": 71,
+     "src": "Management Discussion",
+     "date": "2026-09-05",
+     "st": "internal"
+    },
+    "outstanding": {
+     "v": 2.8,
+     "src": "Management Discussion",
+     "date": "2026-09-05",
+     "st": "internal"
+    },
+    "scholarshipPct": {
+     "v": 46,
+     "src": "Management Discussion",
+     "date": "2026-09-05",
+     "st": "internal"
+    },
+    "discountPct": {
+     "v": 12,
+     "src": "Management Discussion",
+     "date": "2026-09-05",
+     "st": "internal"
+    },
+    "refunds": {
+     "v": 0.38,
+     "src": "Management Discussion",
+     "date": "2026-09-05",
+     "st": "internal"
+    },
+    "courseFees": [
+     {
+      "course": "B.Pharm",
+      "fee": 0.9
+     },
+     {
+      "course": "Pharm.D",
+      "fee": 1.4
+     },
+     {
+      "course": "M.Pharm",
+      "fee": 1.1
+     },
+     {
+      "course": "D.Pharm",
+      "fee": 0.6
+     }
+    ]
+   },
+   "internal": {
+    "visitDate": "2026-09-05",
+    "visitedBy": "Partnerships Team (South)",
+    "notes": "Management keen on partnership and upfront investment. Significant gap between claimed and university-registered admissions. Labs under-equipped; several faculty positions vacant.",
+    "partnershipHistory": "Approached us in 2024; declined at screening."
+   }
+  },
+  {
+   "id": "ncasc",
+   "name": "Narmada College of Arts, Science & Commerce",
+   "shortName": "NCASC",
+   "aishe": "C-23560",
+   "city": "Indore",
+   "state": "Madhya Pradesh",
+   "established": 1987,
+   "ownership": "Registered Society",
+   "category": "Arts, Science & Commerce",
+   "university": "Malwa State University",
+   "campusStatus": "Operational",
+   "website": "www.narmada-sample.ac.in",
+   "regulatory": [
+    {
+     "body": "UGC",
+     "item": "Recognition u/s 2(f) & 12(B)",
+     "value": {
+      "v": "Recognised",
+      "src": "UGC HEI List",
+      "date": "2026-07-10",
+      "st": "govt"
+     },
+     "state": "ok"
+    },
+    {
+     "body": "AICTE",
+     "item": "BBA / BCA approval",
+     "value": {
+      "v": "Approved",
+      "src": "AICTE Portal",
+      "date": "2026-06-10",
+      "st": "govt"
+     },
+     "state": "ok"
+    },
+    {
+     "body": "University",
+     "item": "Affiliation",
+     "value": {
+      "v": "Affiliated (permanent)",
+      "src": "University Portal",
+      "date": "2026-08-11",
+      "st": "verified"
+     },
+     "state": "ok",
+     "affiliation": true
+    },
+    {
+     "body": "NAAC",
+     "item": "Accreditation",
+     "value": {
+      "v": "B+ (CGPA 2.62)",
+      "src": "NAAC Portal",
+      "date": "2022-08-29",
+      "st": "govt"
+     },
+     "validUntil": "2027-08-28",
+     "state": "ok",
+     "naac": true
+    },
+    {
+     "body": "NBA",
+     "item": "—",
+     "value": {
+      "v": "Not applicable",
+      "src": "NBA Portal",
+      "date": "2026-07-01",
+      "st": "govt"
+     },
+     "state": "na"
+    },
+    {
+     "body": "Autonomy",
+     "item": "Autonomous status",
+     "value": {
+      "v": "Not autonomous",
+      "src": "UGC Autonomous Colleges List",
+      "date": "2026-07-10",
+      "st": "govt"
+     },
+     "state": "na"
+    }
+   ],
+   "admissions": [
+    {
+     "year": "2021-22",
+     "intake": {
+      "v": 1800,
+      "src": "University Approved Intake",
+      "date": "2021-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 1500,
+      "src": "College Website / Prospectus",
+      "date": "2021-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 1380,
+      "src": "University Portal",
+      "date": "2022-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2022-23",
+     "intake": {
+      "v": 1800,
+      "src": "University Approved Intake",
+      "date": "2022-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 1560,
+      "src": "College Website / Prospectus",
+      "date": "2022-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 1420,
+      "src": "University Portal",
+      "date": "2023-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2023-24",
+     "intake": {
+      "v": 1800,
+      "src": "University Approved Intake",
+      "date": "2023-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 1600,
+      "src": "College Website / Prospectus",
+      "date": "2023-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 1440,
+      "src": "University Portal",
+      "date": "2024-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2024-25",
+     "intake": {
+      "v": 1920,
+      "src": "University Approved Intake",
+      "date": "2024-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 1640,
+      "src": "College Website / Prospectus",
+      "date": "2024-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 1450,
+      "src": "University Portal",
+      "date": "2025-02-20",
+      "st": "verified"
+     }
+    },
+    {
+     "year": "2025-26",
+     "intake": {
+      "v": 1920,
+      "src": "University Approved Intake",
+      "date": "2025-05-30",
+      "st": "govt"
+     },
+     "claimed": {
+      "v": 1700,
+      "src": "College Website / Prospectus",
+      "date": "2025-10-15",
+      "st": "self"
+     },
+     "verified": {
+      "v": 1470,
+      "src": "University Portal",
+      "date": "2026-09-23",
+      "st": "verified"
+     }
+    }
+   ],
+   "courses": [
+    {
+     "name": "B.Com",
+     "level": "UG",
+     "duration": 3,
+     "intake": 600,
+     "admitted": 560,
+     "status": "active"
+    },
+    {
+     "name": "B.Sc (PCM / CBZ)",
+     "level": "UG",
+     "duration": 3,
+     "intake": 360,
+     "admitted": 248,
+     "status": "active"
+    },
+    {
+     "name": "B.A.",
+     "level": "UG",
+     "duration": 3,
+     "intake": 360,
+     "admitted": 196,
+     "status": "active"
+    },
+    {
+     "name": "BBA",
+     "level": "UG",
+     "duration": 3,
+     "intake": 180,
+     "admitted": 176,
+     "status": "active"
+    },
+    {
+     "name": "BCA",
+     "level": "UG",
+     "duration": 3,
+     "intake": 180,
+     "admitted": 180,
+     "status": "active"
+    },
+    {
+     "name": "B.Com (Fintech)",
+     "level": "UG",
+     "duration": 3,
+     "intake": 120,
+     "admitted": 72,
+     "status": "new",
+     "since": "2024-25"
+    },
+    {
+     "name": "M.Com",
+     "level": "PG",
+     "duration": 2,
+     "intake": 120,
+     "admitted": 38,
+     "status": "active"
+    },
+    {
+     "name": "M.A. (Hindi)",
+     "level": "PG",
+     "duration": 2,
+     "intake": 0,
+     "admitted": 0,
+     "status": "discontinued",
+     "since": "2024-25"
+    }
+   ],
+   "coursesSource": {
+    "v": "Course-wise 2025-26",
+    "src": "University Portal",
+    "date": "2026-09-23",
+    "st": "verified"
+   },
+   "placements": [
+    {
+     "year": 2021,
+     "eligible": {
+      "v": 610,
+      "src": "College Placement Report",
+      "date": "2021-09-30",
+      "st": "self"
+     },
+     "placed": null,
+     "claimedPct": {
+      "v": 62,
+      "src": "College Website",
+      "date": "2021-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 6,
+      "src": "College Placement Report",
+      "date": "2021-09-30",
+      "st": "self"
+     },
+     "average": {
+      "v": 2.9,
+      "src": "College Placement Report",
+      "date": "2021-09-30",
+      "st": "self"
+     },
+     "median": {
+      "v": 2.6,
+      "src": "College Placement Report",
+      "date": "2021-09-30",
+      "st": "self"
+     }
+    },
+    {
+     "year": 2022,
+     "eligible": {
+      "v": 640,
+      "src": "College Placement Report",
+      "date": "2022-09-30",
+      "st": "self"
+     },
+     "placed": null,
+     "claimedPct": {
+      "v": 60,
+      "src": "College Website",
+      "date": "2022-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 6.5,
+      "src": "College Placement Report",
+      "date": "2022-09-30",
+      "st": "self"
+     },
+     "average": {
+      "v": 3,
+      "src": "College Placement Report",
+      "date": "2022-09-30",
+      "st": "self"
+     },
+     "median": {
+      "v": 2.7,
+      "src": "College Placement Report",
+      "date": "2022-09-30",
+      "st": "self"
+     }
+    },
+    {
+     "year": 2023,
+     "eligible": {
+      "v": 660,
+      "src": "College Placement Report",
+      "date": "2023-09-30",
+      "st": "self"
+     },
+     "placed": null,
+     "claimedPct": {
+      "v": 64,
+      "src": "College Website",
+      "date": "2023-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 7.2,
+      "src": "College Placement Report",
+      "date": "2023-09-30",
+      "st": "self"
+     },
+     "average": {
+      "v": 3.1,
+      "src": "College Placement Report",
+      "date": "2023-09-30",
+      "st": "self"
+     },
+     "median": {
+      "v": 2.8,
+      "src": "College Placement Report",
+      "date": "2023-09-30",
+      "st": "self"
+     }
+    },
+    {
+     "year": 2024,
+     "eligible": {
+      "v": 690,
+      "src": "College Placement Report",
+      "date": "2024-09-30",
+      "st": "self"
+     },
+     "placed": null,
+     "claimedPct": {
+      "v": 63,
+      "src": "College Website",
+      "date": "2024-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 7.5,
+      "src": "College Placement Report",
+      "date": "2024-09-30",
+      "st": "self"
+     },
+     "average": {
+      "v": 3.2,
+      "src": "College Placement Report",
+      "date": "2024-09-30",
+      "st": "self"
+     },
+     "median": {
+      "v": 2.9,
+      "src": "College Placement Report",
+      "date": "2024-09-30",
+      "st": "self"
+     }
+    },
+    {
+     "year": 2025,
+     "eligible": {
+      "v": 710,
+      "src": "College Placement Report",
+      "date": "2025-09-30",
+      "st": "self"
+     },
+     "placed": null,
+     "claimedPct": {
+      "v": 65,
+      "src": "College Website",
+      "date": "2025-08-01",
+      "st": "self"
+     },
+     "highest": {
+      "v": 8,
+      "src": "College Placement Report",
+      "date": "2025-09-30",
+      "st": "self"
+     },
+     "average": {
+      "v": 3.4,
+      "src": "College Placement Report",
+      "date": "2025-09-30",
+      "st": "self"
+     },
+     "median": {
+      "v": 3,
+      "src": "College Placement Report",
+      "date": "2025-09-30",
+      "st": "self"
+     }
+    }
+   ],
+   "recruiters": {
+    "total": {
+     "v": 64,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "repeat": {
+     "v": 38,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "newCount": {
+     "v": 26,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "international": {
+     "v": 0,
+     "src": "College Placement Report",
+     "date": "2025-09-30",
+     "st": "self"
+    },
+    "top": [
+     "Indus Ledger Finance",
+     "Malwa Cooperative Bank",
+     "Peakline Consulting",
+     "Orbit Infosystems",
+     "ShopKart Retail",
+     "Kaveri Bank"
+    ],
+    "internships": [
+     "Malwa Cooperative Bank",
+     "ShopKart Retail",
+     "Ledgerly Accounting LLP"
+    ],
+    "sectors": {
+     "IT": 21,
+     "BFSI": 44,
+     "Core": 4,
+     "Services": 31
+    },
+    "locations": {
+     "Indore": 55,
+     "Bhopal": 12,
+     "Pune": 10,
+     "Others": 23
+    }
+   },
+   "nirf": {
+    "College": [
+     {
+      "year": 2022,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2022-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2023,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2023-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2024,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2024-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2025,
+      "rank": {
+       "v": "201-300",
+       "src": "NIRF",
+       "date": "2025-08-13",
+       "st": "govt"
+      }
+     },
+     {
+      "year": 2026,
+      "rank": {
+       "v": null,
+       "src": "NIRF",
+       "date": "2026-08-13",
+       "st": "govt"
+      }
+     }
+    ]
+   },
+   "promoter": {
+    "trust": "Narmada Shiksha Samiti",
+    "entityType": "Society (MP Societies Registrikaran Adhiniyam)",
+    "trustEstablished": 1985,
+    "registration": {
+     "v": "Reg. No. 05/IND/1985",
+     "src": "Registrar of Societies",
+     "date": "2026-08-11",
+     "st": "verified"
+    },
+    "promoters": [
+     {
+      "name": "Shri Ramesh Chandra Dubey",
+      "role": "President"
+     },
+     {
+      "name": "Dr. Kavita Pandey",
+      "role": "Secretary"
+     }
+    ],
+    "board": [
+     "Shri Ramesh Chandra Dubey",
+     "Dr. Kavita Pandey",
+     "Ajay Malviya",
+     "CA Pooja Khandelwal"
+    ],
+    "keyManagement": [
+     {
+      "name": "Dr. S. K. Tiwari",
+      "role": "Principal"
+     },
+     {
+      "name": "Meena Joshi",
+      "role": "Placement Officer"
+     }
+    ],
+    "otherInstitutions": [
+     "Narmada Higher Secondary School (1985)"
+    ],
+    "otherBusinesses": [],
+    "previousInstitutions": [],
+    "insolvency": {
+     "v": "No records found",
+     "src": "IBBI Public Records",
+     "date": "2026-09-10",
+     "st": "verified"
+    },
+    "legal": []
+   },
+   "campus": {
+    "students": {
+     "v": 4320,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "faculty": {
+     "v": 162,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "facultyAttrition": {
+     "v": 9,
+     "src": "Management Discussion",
+     "date": "2026-09-26",
+     "st": "internal"
+    },
+    "attendance": {
+     "v": 72,
+     "src": "College MIS",
+     "date": "2026-09-26",
+     "st": "self"
+    },
+    "passPct": {
+     "v": 76,
+     "src": "University Results Portal",
+     "date": "2026-07-20",
+     "st": "verified"
+    },
+    "backlogs": {
+     "v": 14,
+     "src": "University Results Portal",
+     "date": "2026-07-20",
+     "st": "verified"
+    },
+    "dropouts": {
+     "v": 7.8,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "graduationRate": {
+     "v": 80,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "higherStudies": {
+     "v": 22,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "land": {
+     "v": 11,
+     "src": "NAAC SSR",
+     "date": "2022-08-29",
+     "st": "self"
+    },
+    "builtUp": {
+     "v": 240000,
+     "src": "NAAC SSR",
+     "date": "2022-08-29",
+     "st": "self"
+    },
+    "classrooms": {
+     "v": 64,
+     "src": "NAAC SSR",
+     "date": "2022-08-29",
+     "st": "self"
+    },
+    "labs": {
+     "v": 22,
+     "src": "NAAC SSR",
+     "date": "2022-08-29",
+     "st": "self"
+    },
+    "library": {
+     "v": 61000,
+     "src": "AISHE",
+     "date": "2026-03-31",
+     "st": "govt"
+    },
+    "hostelCapacity": {
+     "v": 240,
+     "src": "Campus Visit",
+     "date": "2026-09-26",
+     "st": "internal"
+    },
+    "hostelOccupancy": {
+     "v": 205,
+     "src": "Campus Visit",
+     "date": "2026-09-26",
+     "st": "internal"
+    },
+    "buses": {
+     "v": 9,
+     "src": "Campus Visit",
+     "date": "2026-09-26",
+     "st": "internal"
+    },
+    "sports": "Playground, indoor badminton hall"
+   },
+   "commercial": {
+    "capacity": {
+     "v": 5520,
+     "src": "University Approved Intake",
+     "date": "2026-08-11",
+     "st": "govt"
+    },
+    "avgFee": {
+     "v": 0.42,
+     "src": "University Fee Schedule",
+     "date": "2025-06-15",
+     "st": "govt"
+    },
+    "collectionEfficiency": {
+     "v": 91,
+     "src": "Audited Financials FY25",
+     "date": "2026-09-26",
+     "st": "internal"
+    },
+    "outstanding": {
+     "v": 0.9,
+     "src": "Audited Financials FY25",
+     "date": "2026-09-26",
+     "st": "internal"
+    },
+    "scholarshipPct": {
+     "v": 29,
+     "src": "Audited Financials FY25",
+     "date": "2026-09-26",
+     "st": "internal"
+    },
+    "discountPct": {
+     "v": 3,
+     "src": "Management Discussion",
+     "date": "2026-09-26",
+     "st": "internal"
+    },
+    "refunds": {
+     "v": 0.08,
+     "src": "Audited Financials FY25",
+     "date": "2026-09-26",
+     "st": "internal"
+    },
+    "courseFees": [
+     {
+      "course": "B.Com / B.A. / B.Sc",
+      "fee": 0.32
+     },
+     {
+      "course": "BBA / BCA",
+      "fee": 0.65
+     },
+     {
+      "course": "B.Com (Fintech)",
+      "fee": 0.85
+     },
+     {
+      "course": "M.Com",
+      "fee": 0.4
+     }
+    ]
+   },
+   "internal": {
+    "visitDate": "2026-09-26",
+    "visitedBy": "Partnerships Team (Central)",
+    "notes": "Stable, well-regarded local college. Placement numbers are self-reported only — request offer letters / company confirmations. Interest in a fintech / analytics add-on programme.",
+    "partnershipHistory": "No prior partnership."
+   }
+  }
+ ]
+}

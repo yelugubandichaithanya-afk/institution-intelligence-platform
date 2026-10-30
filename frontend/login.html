@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in · Institution Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="auth-page">
+  <div class="auth-shell">
+    <aside class="auth-brand">
+      <a class="logo" href="login.html">
+        <span class="logo-mark">IIP</span>
+        <span>Institution Intelligence<small>One Search. One Profile. One Executive View.</small></span>
+      </a>
+      <h1>Due diligence for institution partnerships.</h1>
+      <ul>
+        <li>✅ 5-year admission, placement &amp; ranking intelligence</li>
+        <li>✅ Every number traced to its source and verification status</li>
+        <li>✅ Risk &amp; red-flag centre, promoter due diligence</li>
+        <li>✅ Side-by-side comparison of up to 4 colleges</li>
+      </ul>
+      <p class="small">Access is restricted to signed-in team members.</p>
+    </aside>
+
+    <main class="auth-card">
+      <div class="auth-tabs" role="tablist">
+        <button type="button" role="tab" class="active" data-tab="login" aria-selected="true">Sign in</button>
+        <button type="button" role="tab" data-tab="signup" aria-selected="false">Create account</button>
+      </div>
+
+      <div class="alert" id="alert" role="alert" hidden></div>
+
+      <form id="loginForm" class="auth-form" novalidate>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
+        <button class="btn btn-block" type="submit">Sign in</button>
+      </form>
+
+      <form id="signupForm" class="auth-form" novalidate hidden>
+        <label>Full name<input type="text" name="full_name" autocomplete="name" required></label>
+        <label>Work email<input type="email" name="email" autocomplete="email" required></label>
+        <label>Password<input type="password" name="password" autocomplete="new-password" minlength="8" required>
+          <span class="hint">At least 8 characters</span></label>
+        <label>Confirm password<input type="password" name="confirm" autocomplete="new-password" required></label>
+        <button class="btn btn-block" type="submit">Create account</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    (() => {
+      const next = Auth.safeNext(new URLSearchParams(location.search).get('next'));
+      if (Auth.session()) { location.replace(next); return; }
+
+      const alertBox = document.getElementById('alert');
+      const forms = { login: document.getElementById('loginForm'), signup: document.getElementById('signupForm') };
+
+      function showAlert(msg, kind = 'error') {
+        alertBox.textContent = msg;
+        alertBox.className = `alert ${kind}`;
+        alertBox.hidden = !msg;
+      }
+
+      function switchTab(tab) {
+        document.querySelectorAll('.auth-tabs button').forEach((b) => {
+          b.classList.toggle('active', b.dataset.tab === tab);
+          b.setAttribute('aria-selected', b.dataset.tab === tab);
+        });
+        Object.entries(forms).forEach(([k, f]) => { f.hidden = k !== tab; });
+        showAlert('');
+        forms[tab].querySelector('input').focus();
+      }
+
+      // Returning from the confirmation email: Supabase appends #...&type=signup (or an error).
+      const hash = new URLSearchParams(location.hash.slice(1));
+      if (hash.get('type') === 'signup') showAlert('Email confirmed. Please sign in.', 'success');
+      else if (hash.get('error_description')) showAlert(hash.get('error_description'));
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+
+      document.querySelector('.auth-tabs').addEventListener('click', (e) => {
+        if (e.target.dataset.tab) switchTab(e.target.dataset.tab);
+      });
+
+      async function submitWith(form, fn) {
+        const btn = form.querySelector('button[type=submit]');
+        const label = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = 'Please wait…';
+        try { await fn(); } catch (err) { showAlert(err.message); } finally {
+          btn.disabled = false;
+          btn.textContent = label;
+        }
+      }
+
+      forms.login.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const f = new FormData(forms.login);
+        submitWith(forms.login, async () => {
+          await Auth.login(f.get('email').trim(), f.get('password'));
+          location.replace(next);
+        });
+      });
+
+      forms.signup.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const f = new FormData(forms.signup);
+        if (!f.get('full_name').trim()) return showAlert('Please enter your full name.');
+        if (f.get('password').length < 8) return showAlert('Password must be at least 8 characters.');
+        if (f.get('password') !== f.get('confirm')) return showAlert('Passwords do not match.');
+        submitWith(forms.signup, async () => {
+          const res = await Auth.signup(f.get('full_name').trim(), f.get('email').trim(), f.get('password'));
+          if (res.session) { location.replace(next); return; }
+          switchTab('login');
+          forms.login.email.value = f.get('email').trim();
+          showAlert(res.message || 'Account created. Please sign in.', 'success');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

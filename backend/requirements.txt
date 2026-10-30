@@ -1,0 +1,7 @@
+flask>=3.0,<4
+flask-cors>=4.0
+supabase>=2.10,<3
+python-dotenv>=1.0
+requests>=2.31
+gunicorn>=22.0
+psycopg[binary]>=3.1

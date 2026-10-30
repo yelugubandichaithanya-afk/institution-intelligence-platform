@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institution Intelligence Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">IIP</span>
+      <span>Institution Intelligence<small>One Search. One Profile. One Executive View.</small></span>
+    </a>
+    <nav class="topnav">
+      <a href="index.html" class="active">Search</a>
+      <a href="compare.html">Compare</a>
+    </nav>
+    <div class="user-menu" id="userMenu"></div>
+  </header>
+  <div class="sample-banner">Showing fictional sample data. No real institutions, people or organisations are represented.</div>
+
+  <section class="hero">
+    <span class="tagline">🔎 College Intelligence</span>
+    <h1>Search College / Institute / University</h1>
+    <p>Verify the institution, analyse 5-year performance, identify risks and assess commercial potential.</p>
+  </section>
+
+  <div class="search-panel">
+    <form class="search-row" id="searchForm" autocomplete="off">
+      <input id="q" type="search" placeholder="Enter College Name / AISHE Code / University / City / Promoter" aria-label="Search institutions">
+      <button class="btn" type="submit">Search</button>
+    </form>
+    <div class="suggest" id="suggest"></div>
+    <div class="chips" id="fieldChips">
+      <button type="button" class="chip active" data-field="all">All fields</button>
+      <button type="button" class="chip" data-field="name">College name</button>
+      <button type="button" class="chip" data-field="university">University</button>
+      <button type="button" class="chip" data-field="aishe">AISHE code</button>
+      <button type="button" class="chip" data-field="city">City / State</button>
+      <button type="button" class="chip" data-field="promoter">Promoter / Trust</button>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="workflow">
+      <span>Search college</span><b>→</b><span>Verify institution</span><b>→</b><span>Analyse 5-year performance</span><b>→</b>
+      <span>Identify risks</span><b>→</b><span>Assess commercial potential</span><b>→</b><span>Executive brief</span><b>→</b><span>Partnership decision</span>
+    </div>
+
+    <div class="section-head" style="margin-top:28px">
+      <h2 id="resultsTitle">All institutions</h2>
+      <span class="muted small" id="resultsCount"></span>
+    </div>
+    <div class="results" id="results"><div class="loading">Loading…</div></div>
+
+    <div class="sources-grid">
+      <div class="source-layer"><h4>🏛 Government / Regulatory</h4><ul><li>UGC, AISHE, AICTE</li><li>NAAC, NIRF, NBA</li><li>Statutory councils (PCI, BCI…)</li></ul></div>
+      <div class="source-layer"><h4>🎓 University</h4><ul><li>Admission / registration portal</li><li>Affiliation & approved intake</li><li>Results portal</li></ul></div>
+      <div class="source-layer"><h4>🏫 Institution</h4><ul><li>Website & mandatory disclosures</li><li>Placement reports</li><li>Annual reports</li></ul></div>
+      <div class="source-layer"><h4>⚖️ Public records</h4><ul><li>Court records, regulatory orders</li><li>Government notices</li><li>Trust / corporate filings</li></ul></div>
+      <div class="source-layer"><h4>🔒 Internal intelligence</h4><ul><li>Campus visits</li><li>Management discussions</li><li>Financials & partnership history</li></ul></div>
+    </div>
+  </main>
+
+  <div class="compare-tray" id="compareTray" hidden></div>
+
+  <footer class="footer">Institution Intelligence Platform · College project prototype</footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/risk.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

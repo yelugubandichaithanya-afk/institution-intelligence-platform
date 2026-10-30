@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Institutions · IIP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">IIP</span>
+      <span>Institution Intelligence<small>One Search. One Profile. One Executive View.</small></span>
+    </a>
+    <nav class="topnav">
+      <a href="index.html">Search</a>
+      <a href="compare.html" class="active">Compare</a>
+    </nav>
+    <div class="user-menu" id="userMenu"></div>
+  </header>
+  <div class="sample-banner">Showing fictional sample data. No real institutions, people or organisations are represented.</div>
+
+  <main class="container wide">
+    <div class="section-head">
+      <h2>⚖️ Compare institutions</h2>
+      <button class="btn-ghost no-print" onclick="window.print()">🖨 Print comparison</button>
+    </div>
+    <div class="card picker no-print">
+      <div class="picker-row" id="picked"></div>
+      <select id="addSelect" aria-label="Add institution to compare"></select>
+      <p class="small muted" style="margin:10px 0 0">Select 2–4 institutions. Best value in each row is highlighted in green. Hover values with a coloured dot to see their source.</p>
+    </div>
+    <div id="compare"></div>
+  </main>
+
+  <footer class="footer">Institution Intelligence Platform · College project prototype</footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/risk.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/compare.js"></script>
+</body>
+</html>

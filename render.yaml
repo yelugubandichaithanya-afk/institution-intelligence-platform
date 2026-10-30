@@ -1,0 +1,25 @@
+# Render Blueprint — Flask API (Dashboard → New → Blueprint → pick this repo)
+services:
+  - type: web
+    name: iip-api
+    runtime: python
+    plan: free
+    region: singapore
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 60
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.5
+      - key: SUPABASE_URL
+        value: https://ktryugdppuxodccmbilk.supabase.co
+      - key: SUPABASE_ANON_KEY
+        sync: false   # entered in the Render dashboard
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false   # entered in the Render dashboard (secret)
+      - key: FRONTEND_ORIGINS
+        value: https://institution-intelligence.vercel.app
+      - key: SITE_URL
+        value: https://institution-intelligence.vercel.app
