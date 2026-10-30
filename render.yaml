@@ -20,6 +20,6 @@ services:
       - key: SUPABASE_SERVICE_ROLE_KEY
         sync: false   # entered in the Render dashboard (secret)
       - key: FRONTEND_ORIGINS
-        value: https://institution-intelligence.vercel.app
+        value: https://institution-intelligence-orpin.vercel.app
       - key: SITE_URL
-        value: https://institution-intelligence.vercel.app
+        value: https://institution-intelligence-orpin.vercel.app
