@@ -318,28 +318,16 @@ table.cmp-table th { vertical-align: top; text-transform: none; letter-spacing: 
 .auth-brand ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; color: rgba(255,255,255,.85); }
 .auth-brand .small { color: rgba(255,255,255,.55); margin-top: auto; }
 .auth-card { padding: 36px; }
-.auth-tabs { display: grid; grid-template-columns: 1fr 1fr; background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 4px; margin-bottom: 20px; }
-.auth-tabs button { font: inherit; font-weight: 600; border: 0; background: none; padding: 9px; border-radius: 7px; cursor: pointer; color: var(--text-2); }
-.auth-tabs button.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
 .auth-form { display: grid; gap: 14px; }
 .auth-form[hidden] { display: none; }
 .auth-form label { display: grid; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text-2); }
 .auth-form input { font: inherit; font-size: 15px; padding: 11px 12px; border: 1px solid var(--border); border-radius: 8px; color: var(--text); }
 .auth-form input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-.auth-form .hint { font-weight: 400; font-size: 12px; color: var(--muted); }
 .auth-form .btn { margin-top: 6px; }
 .btn:disabled { opacity: .6; cursor: wait; }
-.auth-links { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 2px; }
-.text-link { background: none; border: 0; padding: 0; font: inherit; font-size: 13px; color: var(--accent); cursor: pointer; }
-.text-link:hover { text-decoration: underline; }
-.auth-card-solo { background: var(--surface); border-radius: 18px; width: 100%; max-width: 420px; box-shadow: 0 24px 60px rgba(0,0,0,.3); }
-.auth-card-solo .auth-links { margin-top: 14px; }
-.logo-dark { color: var(--text); }
-.logo-dark small { color: var(--text-2); opacity: 1; }
 .auth-title { font-size: 20px; margin: 22px 0 16px; }
 .alert { padding: 10px 12px; border-radius: 8px; font-size: 13px; margin-bottom: 14px; }
 .alert.error { background: var(--red-soft); color: var(--red); }
-.alert.success { background: var(--green-soft); color: var(--green); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {

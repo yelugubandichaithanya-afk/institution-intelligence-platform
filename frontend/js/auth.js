@@ -1,4 +1,4 @@
-/* Session handling: login / signup / refresh / logout via the Flask API. */
+/* Session handling: login / refresh / logout via the Flask API. */
 const Auth = (() => {
   const KEY = 'iip_session';
   const base = () => window.IIP_CONFIG.API_BASE;
@@ -31,22 +31,6 @@ const Auth = (() => {
     save(r.data.session);
     return r.data.session.user;
   }
-
-  async function signup(fullName, email, password) {
-    const r = await post('/auth/signup', { full_name: fullName, email, password });
-    if (!r.ok) throw new Error(r.data.error || 'Sign up failed.');
-    if (r.data.session) save(r.data.session);
-    return r.data; // { session, message? }
-  }
-
-  async function simplePost(path, body, token) {
-    const r = await post(path, body, token);
-    if (!r.ok) throw new Error(r.data.error || 'Request failed.');
-    return r.data.message;
-  }
-  const requestPasswordReset = (email) => simplePost('/auth/recover', { email });
-  const resendConfirmation = (email) => simplePost('/auth/resend-confirmation', { email });
-  const updatePassword = (token, password) => simplePost('/auth/update-password', { password }, token);
 
   let refreshing = null;
   function refresh() {
@@ -101,8 +85,5 @@ const Auth = (() => {
     return true;
   }
 
-  return {
-    session, login, signup, refresh, logout, requireLogin, redirectToLogin, safeNext,
-    requestPasswordReset, resendConfirmation, updatePassword,
-  };
+  return { session, login, refresh, logout, requireLogin, redirectToLogin, safeNext };
 })();

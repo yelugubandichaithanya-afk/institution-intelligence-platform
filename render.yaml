@@ -21,5 +21,3 @@ services:
         sync: false   # entered in the Render dashboard (secret)
       - key: FRONTEND_ORIGINS
         value: https://institution-intelligence-orpin.vercel.app
-      - key: SITE_URL
-        value: https://institution-intelligence-orpin.vercel.app

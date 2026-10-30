@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 .vercel/
 deploy.env
+test-accounts.txt

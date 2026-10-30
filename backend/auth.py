@@ -1,6 +1,7 @@
-"""Authentication — proxies Supabase Auth (GoTrue) so the frontend needs no SDK."""
+"""Authentication — proxies Supabase Auth (GoTrue) so the frontend needs no SDK.
+
+Sign-in only: accounts are created by an administrator in Supabase (see backend/create_user.py)."""
 import hashlib
-import re
 import time
 from functools import wraps
 
@@ -12,8 +13,6 @@ from errors import ApiError, error_response
 
 bp = Blueprint("auth", __name__, url_prefix="/api/auth")
 
-EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
-MIN_PASSWORD = 8
 TOKEN_CACHE_SECONDS = 60
 _token_cache = {}  # sha256(token) -> (user, expires_at)
 
@@ -58,14 +57,6 @@ def _body():
     return request.get_json(silent=True) or {}
 
 
-RATE_LIMIT_MSG = "Too many emails have been sent recently. Please wait a few minutes and try again."
-
-
-def _redirect(page):
-    """Where links in auth emails should land (must be in Supabase's allowed redirect URLs)."""
-    return {"redirect_to": f"{Config.SITE_URL}/{page}"} if Config.SITE_URL else None
-
-
 def verify_token(token):
     key = hashlib.sha256(token.encode()).hexdigest()
     now = time.monotonic()
@@ -97,35 +88,6 @@ def require_auth(fn):
     return wrapper
 
 
-@bp.post("/signup")
-def signup():
-    body = _body()
-    email = (body.get("email") or "").strip().lower()
-    password = body.get("password") or ""
-    full_name = (body.get("full_name") or "").strip()
-
-    if not full_name:
-        return error_response(400, "Full name is required.")
-    if not EMAIL_RE.match(email):
-        return error_response(400, "Enter a valid email address.")
-    if len(password) < MIN_PASSWORD:
-        return error_response(400, f"Password must be at least {MIN_PASSWORD} characters.")
-
-    status, data = _gotrue("POST", "/signup", params=_redirect("login.html"), json={
-        "email": email, "password": password, "data": {"full_name": full_name},
-    })
-    if status == 429:
-        return error_response(429, RATE_LIMIT_MSG)
-    if status >= 400:
-        return error_response(400 if status < 500 else 502, _message(data, "Could not create account."))
-
-    # With email confirmation enabled Supabase returns no session.
-    if data.get("access_token"):
-        return jsonify({"session": _session(data)}), 201
-    return jsonify({"session": None,
-                    "message": "Account created. Check your email to confirm, then sign in."}), 201
-
-
 @bp.post("/login")
 def login():
     body = _body()
@@ -154,47 +116,6 @@ def refresh():
     if status >= 400:
         return error_response(401, "Your session has expired. Please sign in again.")
     return jsonify({"session": _session(data)})
-
-
-@bp.post("/recover")
-def recover():
-    """Send a password-reset email. Same reply whether or not the account exists."""
-    email = (_body().get("email") or "").strip().lower()
-    if not EMAIL_RE.match(email):
-        return error_response(400, "Enter a valid email address.")
-    status, _ = _gotrue("POST", "/recover", params=_redirect("reset-password.html"), json={"email": email})
-    if status == 429:
-        return error_response(429, RATE_LIMIT_MSG)
-    if status >= 500:
-        return error_response(502, "Could not send the reset email. Try again shortly.")
-    return jsonify({"message": "If an account exists for that email, a password reset link has been sent."})
-
-
-@bp.post("/resend-confirmation")
-def resend_confirmation():
-    email = (_body().get("email") or "").strip().lower()
-    if not EMAIL_RE.match(email):
-        return error_response(400, "Enter a valid email address.")
-    status, _ = _gotrue("POST", "/resend", params=_redirect("login.html"), json={"type": "signup", "email": email})
-    if status == 429:
-        return error_response(429, RATE_LIMIT_MSG)
-    if status >= 500:
-        return error_response(502, "Could not send the email. Try again shortly.")
-    return jsonify({"message": "If that account is awaiting confirmation, a new link has been sent."})
-
-
-@bp.post("/update-password")
-@require_auth
-def update_password():
-    """Set a new password. Called with the short-lived token from the reset email."""
-    password = _body().get("password") or ""
-    if len(password) < MIN_PASSWORD:
-        return error_response(400, f"Password must be at least {MIN_PASSWORD} characters.")
-    token = request.headers["Authorization"][7:].strip()
-    status, data = _gotrue("PUT", "/user", token=token, json={"password": password})
-    if status >= 400:
-        return error_response(400 if status < 500 else 502, _message(data, "Could not update password."))
-    return jsonify({"message": "Password updated. Please sign in with your new password."})
 
 
 @bp.post("/logout")

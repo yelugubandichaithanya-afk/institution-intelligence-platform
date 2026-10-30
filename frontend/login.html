@@ -26,10 +26,7 @@
     </aside>
 
     <main class="auth-card">
-      <div class="auth-tabs" role="tablist">
-        <button type="button" role="tab" class="active" data-tab="login" aria-selected="true">Sign in</button>
-        <button type="button" role="tab" data-tab="signup" aria-selected="false">Create account</button>
-      </div>
+      <h1 class="auth-title" style="margin-top:0">Sign in</h1>
 
       <div class="alert" id="alert" role="alert" hidden></div>
 
@@ -37,27 +34,8 @@
         <label>Email<input type="email" name="email" autocomplete="email" required></label>
         <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
         <button class="btn btn-block" type="submit">Sign in</button>
-        <div class="auth-links">
-          <button type="button" class="text-link" id="forgotLink">Forgot password?</button>
-          <button type="button" class="text-link" id="resendLink" hidden>Resend confirmation email</button>
-        </div>
       </form>
-
-      <form id="forgotForm" class="auth-form" novalidate hidden>
-        <p class="small muted" style="margin:0">Enter your account email and we'll send you a link to set a new password.</p>
-        <label>Email<input type="email" name="email" autocomplete="email" required></label>
-        <button class="btn btn-block" type="submit">Send reset link</button>
-        <div class="auth-links"><button type="button" class="text-link" id="backToLogin">← Back to sign in</button></div>
-      </form>
-
-      <form id="signupForm" class="auth-form" novalidate hidden>
-        <label>Full name<input type="text" name="full_name" autocomplete="name" required></label>
-        <label>Work email<input type="email" name="email" autocomplete="email" required></label>
-        <label>Password<input type="password" name="password" autocomplete="new-password" minlength="8" required>
-          <span class="hint">At least 8 characters</span></label>
-        <label>Confirm password<input type="password" name="confirm" autocomplete="new-password" required></label>
-        <button class="btn btn-block" type="submit">Create account</button>
-      </form>
+      <p class="small muted" style="margin:16px 0 0">Accounts are created by the administrator. Contact them if you need access.</p>
     </main>
   </div>
 
@@ -69,99 +47,29 @@
       const next = Auth.safeNext(new URLSearchParams(location.search).get('next'));
       if (Auth.session()) { location.replace(next); return; }
 
+      const form = document.getElementById('loginForm');
       const alertBox = document.getElementById('alert');
-      const forms = {
-        login: document.getElementById('loginForm'),
-        signup: document.getElementById('signupForm'),
-        forgot: document.getElementById('forgotForm'),
-      };
-      const resendLink = document.getElementById('resendLink');
-
-      function showAlert(msg, kind = 'error') {
+      const showAlert = (msg) => {
         alertBox.textContent = msg;
-        alertBox.className = `alert ${kind}`;
+        alertBox.className = 'alert error';
         alertBox.hidden = !msg;
-      }
+      };
 
-      function switchTab(tab) {
-        document.querySelectorAll('.auth-tabs button').forEach((b) => {
-          b.classList.toggle('active', b.dataset.tab === tab);
-          b.setAttribute('aria-selected', b.dataset.tab === tab);
-        });
-        Object.entries(forms).forEach(([k, f]) => { f.hidden = k !== tab; });
-        showAlert('');
-        forms[tab].querySelector('input').focus();
-      }
-
-      // Returning from the confirmation email: Supabase appends #...&type=signup (or an error).
-      const hash = new URLSearchParams(location.hash.slice(1));
-      if (hash.get('type') === 'signup') showAlert('Email confirmed. Please sign in.', 'success');
-      else if (hash.get('error_description')) showAlert(hash.get('error_description'));
-      else if (new URLSearchParams(location.search).get('reset') === '1') showAlert('Password updated. Please sign in with your new password.', 'success');
-      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
-
-      document.getElementById('forgotLink').addEventListener('click', () => {
-        switchTab('forgot');
-        forms.forgot.email.value = forms.login.email.value;
-      });
-      document.getElementById('backToLogin').addEventListener('click', () => switchTab('login'));
-
-      resendLink.addEventListener('click', async () => {
-        const email = forms.login.email.value.trim();
-        if (!email) return showAlert('Enter your email above first.');
-        try { showAlert(await Auth.resendConfirmation(email), 'success'); } catch (err) { showAlert(err.message); }
-      });
-
-      forms.forgot.addEventListener('submit', (e) => {
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const email = forms.forgot.email.value.trim();
-        if (!email) return showAlert('Please enter your email.');
-        submitWith(forms.forgot, async () => showAlert(await Auth.requestPasswordReset(email), 'success'));
-      });
-
-      document.querySelector('.auth-tabs').addEventListener('click', (e) => {
-        if (e.target.dataset.tab) switchTab(e.target.dataset.tab);
-      });
-
-      async function submitWith(form, fn) {
-        const btn = form.querySelector('button[type=submit]');
-        const label = btn.textContent;
+        const f = new FormData(form);
+        if (!f.get('email').trim() || !f.get('password')) return showAlert('Enter your email and password.');
+        const btn = form.querySelector('button');
         btn.disabled = true;
-        btn.textContent = 'Please wait…';
-        try { await fn(); } catch (err) { showAlert(err.message); } finally {
-          btn.disabled = false;
-          btn.textContent = label;
-        }
-      }
-
-      forms.login.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const f = new FormData(forms.login);
-        resendLink.hidden = true;
-        submitWith(forms.login, async () => {
-          try {
-            await Auth.login(f.get('email').trim(), f.get('password'));
-          } catch (err) {
-            if (/not confirmed/i.test(err.message)) resendLink.hidden = false;
-            throw err;
-          }
+        btn.textContent = 'Signing in…';
+        try {
+          await Auth.login(f.get('email').trim(), f.get('password'));
           location.replace(next);
-        });
-      });
-
-      forms.signup.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const f = new FormData(forms.signup);
-        if (!f.get('full_name').trim()) return showAlert('Please enter your full name.');
-        if (f.get('password').length < 8) return showAlert('Password must be at least 8 characters.');
-        if (f.get('password') !== f.get('confirm')) return showAlert('Passwords do not match.');
-        submitWith(forms.signup, async () => {
-          const res = await Auth.signup(f.get('full_name').trim(), f.get('email').trim(), f.get('password'));
-          if (res.session) { location.replace(next); return; }
-          switchTab('login');
-          forms.login.email.value = f.get('email').trim();
-          showAlert(res.message || 'Account created. Please sign in.', 'success');
-        });
+        } catch (err) {
+          showAlert(err.message);
+          btn.disabled = false;
+          btn.textContent = 'Sign in';
+        }
       });
     })();
   </script>
